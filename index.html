@@ -3,7 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Course Correct Labs</title>
+  <title>Course Correct Labs — AI Research & Evaluation</title>
+  <meta name="description" content="Reproducible evaluations for AI behavior: confidence calibration, temporal drift, and delegated introspection. Research-backed tools to keep AI useful, honest, and aligned." />
+  <meta name="keywords" content="AI evaluation, RLHF, confidence calibration, temporal drift, AI safety, LLM testing, AI research, epistemic alignment" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://course-correct-labs.github.io/course-correct-labs-site/" />
+  <meta property="og:title" content="Course Correct Labs — AI Research & Evaluation" />
+  <meta property="og:description" content="Reproducible evaluations for AI behavior: confidence calibration, temporal drift, and delegated introspection." />
+  <meta property="og:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://course-correct-labs.github.io/course-correct-labs-site/" />
+  <meta property="twitter:title" content="Course Correct Labs — AI Research & Evaluation" />
+  <meta property="twitter:description" content="Reproducible evaluations for AI behavior: confidence calibration, temporal drift, and delegated introspection." />
+  <meta property="twitter:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/logo.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://course-correct-labs.github.io/course-correct-labs-site/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
   <style>
     :root { --bg:#0b0b10; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
 
@@ -233,7 +256,7 @@
         <h2>Blog</h2>
         <p class="sub narrow">Markdown posts. No dashboard. Commit and deploy.</p>
         <div class="grid cols-2" id="blogIndex" style="margin-top:16px"></div>
-        <div id="blogPost" style="margin-top:16px; display:none">
+        <div id="blogPost" style="margin-top:16px; display:none" aria-hidden="true">
           <div class="card"><div class="body"><div id="postMeta" style="color:var(--muted); font-size:.9rem"></div><div class="prose" id="postBody"></div><div style="margin-top:12px"><a class="btn" href="#blog" id="backBtn">← Back to blog</a></div></div></div>
         </div>
       </div>
@@ -285,7 +308,7 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="yr"></span> Course Correct Labs · <a href="mailto:hello@coursecorrectlabs.com">hello@coursecorrectlabs.com</a> · <a href="#">GitHub</a> • <a href="#">X</a> • <a href="#">LinkedIn</a></div>
+    <div class="container">© <span id="yr"></span> Course Correct Labs · <a href="mailto:hello@coursecorrectlabs.com">hello@coursecorrectlabs.com</a> · <a href="https://github.com/Course-Correct-Labs" target="_blank" rel="noopener noreferrer">GitHub</a> • <a href="https://x.com/coursecorrect" target="_blank" rel="noopener noreferrer">X</a> • <a href="https://linkedin.com/company/course-correct-labs" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
   </footer>
 
   <script>
@@ -362,6 +385,7 @@
       if(!p){ location.hash='#blog'; return; }
       idx.style.display='none';
       postView.style.display='block';
+      postView.setAttribute('aria-hidden','false');
       postMeta.innerHTML=`${p.date}${(p.tags||[]).length?' • '+p.tags.join(', '):''}`;
       postBody.innerHTML=mdToHtml(p.body);
       const url=new URL(location.href);
@@ -371,6 +395,7 @@
     function closePost(){
       idx.style.display='grid';
       postView.style.display='none';
+      postView.setAttribute('aria-hidden','true');
       const url=new URL(location.href);
       url.searchParams.delete('post');
       history.replaceState({},'',url);
