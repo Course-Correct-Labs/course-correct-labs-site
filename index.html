@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Correct Labs</title>
+  <style>
+    :root { --bg:#0b0b10; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
+    a{text-decoration:none;color:var(--fg)}
+    .container{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+
+    /* nav */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45);border-bottom:1px solid var(--border)}
+    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
+    .logo{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:block}
+    .menu{display:none;gap:1rem;font-size:.95rem}
+    .menu a{opacity:.8}
+    .menu a.active{color:var(--blue);opacity:1}
+    .hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}
+    @media (min-width:768px){ .menu{display:flex} .hamburger{display:none} }
+    .mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}
+    .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
+
+    /* hero */
+    .hero{position:relative;padding:104px 0 80px;background:
+      radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),
+      radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),
+      radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%)}
+    .hero .container{ text-align:center }
+    .hero .cta{ justify-content:center }
+    .eyebrow{text-transform:uppercase;font-size:.7rem;letter-spacing:.18em;color:var(--muted)}
+    h1{font-size:clamp(2rem,6vw,3.5rem);margin:.5rem 0 0;line-height:1.1}
+    .lead{max-width:720px;color:var(--muted);margin:.8rem auto 0}
+    .cta{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.6rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg)}
+    .btn.primary{background:var(--blue);border-color:var(--blue)}
+
+    /* sections */
+    section{scroll-margin-top:92px;padding:80px 0}
+    h2{font-size:clamp(1.5rem,3.5vw,2rem);margin:0 0 .5rem}
+    .sub{color:var(--muted);max-width:740px;margin:0 auto 22px;}
+    .sub.full{max-width:none}
+    .sub.narrow{max-width:70%}
+    @media (max-width:800px){.sub.narrow{max-width:100%}}
+
+    /* center headings + subtext for selected sections */
+    .section-center h2, .section-center .sub { text-align:center; margin-left:auto; margin-right:auto; }
+    /* extra padding for headings/subtext in selected sections */
+    .section-pad h2{ margin-bottom: 1rem; }
+    .section-pad .sub{ margin-bottom: 44px; }
+    /* research highlights (image tiles) */
+    .highlights{display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+    @media (max-width:800px){ .highlights{grid-template-columns:1fr} }
+    .highlight{background:transparent;border:none;border-radius:14px;overflow:hidden;padding:0;display:flex;flex-direction:column;gap:10px}
+    .highlight .himg{width:100%;aspect-ratio:16/9;border-radius:12px;background:#111318;object-fit:cover;display:block}
+    .highlight .body{padding:.75rem 0;text-align:center}
+    .highlight .body strong{display:block;font-size:1.05rem;margin-bottom:.25rem}
+    .highlight .body p{color:var(--muted); margin:.35rem auto .5rem; max-width:36ch}
+    .highlight .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:800px){ .grid.cols-3{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} }
+
+    .card{border:1px solid var(--border);background:var(--card);border-radius:14px;overflow:hidden}
+    .card .body{padding:1rem; text-align:center}
+    .card .body p{margin-left:auto;margin-right:auto}
+    .card .body .btn{justify-content:center}
+
+    /* keep research modules table left-aligned */
+    #papers .card .body{ text-align:left }
+    #papers .card .body .btn{ justify-content:flex-start }
+
+    /* collaborations: keep bullets left-justified inside centered cards */
+    #work .card .body ul{ text-align:left; display:inline-block; margin:0 auto; padding-left:1.1rem; list-style-position:outside; }
+    #work .card .body li{ text-align:left; line-height:1.8; margin-bottom:8px; }
+    /* add breathing room between headings and bullets in collaborations cards */
+    #work .card .body strong{ display:block; margin-bottom:12px; }
+
+    table{width:100%;border-collapse:collapse;font-size:.95rem}
+    thead{background:rgba(255,255,255,.06)}
+    th,td{padding:.9rem;border-bottom:1px solid var(--border);text-align:left}
+
+    /* blog */
+    .tag{display:inline-block;padding:2px 8px;border-radius:9999px;background:rgba(255,255,255,.09);font-size:.75rem;margin-left:.4rem}
+    .prose p{line-height:1.75;margin:.75rem 0}
+    .prose h3{margin:1.25rem 0 .5rem}
+
+    footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.95rem}
+
+    .pill{display:inline-block;padding:.25rem .6rem;border:1px solid var(--border);border-radius:9999px;background:rgba(255,255,255,.05);font-size:.8rem}
+    .notice{border:1px dashed var(--border);background:rgba(255,255,255,.04);padding:.6rem .75rem;border-radius:.6rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand"><span class="logo" aria-hidden="true"></span>Course Correct Labs</div>
+      <nav class="menu" id="menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#research">Research</a>
+        <a href="#evaluations">Evaluations</a>
+        <a href="#papers">Working Papers</a>
+        <a href="#blog">Blog</a>
+        <a href="#work">Work with us</a>
+      </nav>
+      <button class="hamburger" id="hambtn" aria-label="Toggle menu" aria-controls="mobile" aria-expanded="false">☰</button>
+    </div>
+    <div class="mobile" id="mobile">
+      <div class="container">
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#evaluations">Evaluations</a>
+        <a href="#papers">Working Papers</a>
+        <a href="#blog">Blog</a>
+        <a href="#work">Work with us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="eyebrow">Research & Evaluation</div>
+        <h1>Course Correct the Future.</h1>
+        <p class="lead">Keep AI useful, honest, and on our side.</p>
+        <div class="cta">
+          <a class="btn primary" href="#research">Explore research →</a>
+          <a class="btn" href="#evaluations">Run evaluations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research highlights -->
+    <section id="research">
+      <div class="container section-center section-pad">
+        <h2>Research Highlights</h2>
+        <p class="sub narrow">Three active threads with runnable artifacts. These blurbs are plain English; details live in the Working Papers table below.</p>
+        <div class="highlights" style="margin-top:16px">
+          <a class="highlight" href="#papers-phi">
+            <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <div class="body">
+              <strong>Phi</strong>
+              <p>RLHF optimizes for polite, fluent answers—even when evidence is thin. We test <em>justified vs. performative confidence</em> and show how to reward the right one.</p>
+              <div class="pills"><span class="pill">Φ ratio</span> <span class="pill">Refusal fitness</span></div>
+            </div>
+          </a>
+          <a class="highlight" href="#papers-di">
+            <img class="himg" src="https://picsum.photos/seed/di/800/450" alt="Delegated Introspection image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <div class="body">
+              <strong>DI</strong>
+              <p>People now “think through” models. We map the 3-stage loop that moves reflection outside the mind and quantify the dependency it creates.</p>
+              <div class="pills"><span class="pill">Absorption rate</span> <span class="pill">Turn curve</span></div>
+            </div>
+          </a>
+          <a class="highlight" href="#papers-ot">
+            <img class="himg" src="https://picsum.photos/seed/ot/800/450" alt="Observer-Time image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <div class="body">
+              <strong>OT</strong>
+              <p>Machines can read timestamps but can’t constitute lived intervals. Benchmarks expose temporal drift and failure to self-initiate even one minute.</p>
+              <div class="pills"><span class="pill">Self-initiation</span> <span class="pill">Temporal drift</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="evaluations">
+      <div class="container section-center section-pad">
+        <h2>Evaluations</h2>
+        <p class="sub narrow">Run a &lt;60s smoke test to see if your model repeats itself, stalls, or misreads time. Export CSVs and compare runs across providers.</p>
+        <div class="grid cols-3" style="margin-top:16px">
+          <div class="card"><div class="body"><strong>ΔI drift</strong><p>Mean embedding distance and n-gram novelty over iterations.</p></div></div>
+          <div class="card"><div class="body"><strong>Entropy trajectory</strong><p>Character-level entropy per turn for grounded and ungrounded runs.</p></div></div>
+          <div class="card"><div class="body"><strong>Coherence index</strong><p>LM-as-judge rubric scored 1–5 for fidelity and constraints.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <div class="container section-center section-pad">
+        <h2>Research Modules (Working Papers)</h2>
+        <p class="sub narrow">Summaries and artifacts for ongoing work. Manuscripts are under review; content may change.</p>
+        <div class="notice" style="margin-top:10px">🔒 <strong>Anonymization:</strong> Titles and venues are redacted during double-blind review. Full citations & preprints available on request.</div>
+        <div class="card" style="margin-top:16px">
+          <div class="body">
+            <div style="overflow:auto">
+              <table>
+                <thead>
+                  <tr><th>Label</th><th>Focus</th><th>Key Metrics</th><th>Try it</th><th>Runtime</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr id="papers-phi">
+                    <td><strong>Phi</strong></td>
+                    <td>Epistemic alignment: reward justified confidence over conversational polish.</td>
+                    <td>Φ ratio; Refusal Fitness</td>
+                    <td>Working paper (under review)</td>
+                    <td>&lt; 60s</td>
+                    <td>Under review</td>
+                  </tr>
+                  <tr id="papers-di">
+                    <td><strong>DI</strong></td>
+                    <td>Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</td>
+                    <td>Absorption Rate; Turn Curve</td>
+                    <td>Working paper (under review)</td>
+                    <td>&lt; 60s</td>
+                    <td>Under review</td>
+                  </tr>
+                  <tr id="papers-ot">
+                    <td><strong>OT</strong></td>
+                    <td>Observer-Time: anchors vs. intervals; why systems miss the lived minute.</td>
+                    <td>Self-Initiation; Temporal Drift</td>
+                    <td>Working paper (under review)</td>
+                    <td>&lt; 60s</td>
+                    <td>Under review</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container section-center section-pad">
+        <h2>Blog</h2>
+        <p class="sub narrow">Markdown posts. No dashboard. Commit and deploy.</p>
+        <div class="grid cols-2" id="blogIndex" style="margin-top:16px"></div>
+        <div id="blogPost" style="margin-top:16px; display:none">
+          <div class="card"><div class="body"><div id="postMeta" style="color:var(--muted); font-size:.9rem"></div><div class="prose" id="postBody"></div><div style="margin-top:12px"><a class="btn" href="#blog" id="backBtn">← Back to blog</a></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container section-center section-pad">
+        <h2>Work with us</h2>
+        <p class="sub narrow">We partner on evaluations and grounded fixes. Anonymized publicly during double-blind review; full dossiers available privately.</p>
+        <div class="grid cols-3" style="margin-top:16px">
+          <div class="card"><div class="body">
+            <strong>Evaluation design</strong>
+            <p>Lightweight suites for drift, confidence calibration, and temporal behavior (ΔI, entropy, coherence, Φ ratio, refusal fitness).</p>
+          </div></div>
+          <div class="card"><div class="body">
+            <strong>Integration & tooling</strong>
+            <p>Harness, multi-provider adapters, small datasets, and CI pipelines. Smoke tests in &lt;60s; CSV exports.</p>
+          </div></div>
+          <div class="card"><div class="body">
+            <strong>Partner delivery</strong>
+            <p>Pilots, short reports, and demo dashboards. Measure deltas before/after fixes and ship recommendations.</p>
+          </div></div>
+        </div>
+        <div class="grid cols-2" style="margin-top:32px">
+          <div class="card"><div class="body">
+            <strong>What we ship</strong>
+            <ul>
+              <li>Reproducible evals with &lt;60s smoke tests</li>
+              <li>Metrics grounded in failure modes (ΔI, refusal fitness, temporal drift)</li>
+              <li>Small, inspectable datasets and figures</li>
+            </ul>
+          </div></div>
+          <div class="card"><div class="body">
+            <strong>How to engage</strong>
+            <ul>
+              <li>Email <a href="mailto:hello@coursecorrectlabs.com">hello@coursecorrectlabs.com</a> for the private dossier</li>
+              <li>Request a short talk/demo slot (20 minutes)</li>
+              <li>Collaboration: evals for your model stack</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="cta" style="margin-top:44px;justify-content:center">
+          <a class="btn primary" href="mailto:hello@coursecorrectlabs.com?subject=Request%20Research%20Dossier">Request full dossier</a>
+          <a class="btn" href="#evaluations">View evaluations</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">© <span id="yr"></span> Course Correct Labs · <a href="mailto:hello@coursecorrectlabs.com">hello@coursecorrectlabs.com</a> · <a href="#">GitHub</a> • <a href="#">X</a> • <a href="#">LinkedIn</a></div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const hambtn = document.getElementById('hambtn');
+    const mobile = document.getElementById('mobile');
+    hambtn.addEventListener('click', () => {
+      const open = mobile.style.display === 'block';
+      mobile.style.display = open ? 'none' : 'block';
+      hambtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobile.style.display = 'none';
+      hambtn.setAttribute('aria-expanded','false');
+    }));
+
+    // Active link highlighting
+    const ids = ['home','research','evaluations','papers','blog','work'];
+    const navLinks = [...document.querySelectorAll('#menu a')];
+
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          navLinks.forEach(l=>l.classList.remove('active'));
+          const link = navLinks.find(l=> l.getAttribute('href') === '#' + e.target.id);
+          if(link) link.classList.add('active');
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0.01});
+
+    ids.forEach(id=>{ const el=document.getElementById(id); if(el) obs.observe(el); });
+
+    // Tiny in-page blog (no build): define posts here
+    const POSTS=[
+      { slug:'mirror-loop-figures', title:'Mirror Loop figures update', date:'2025-10-11', summary:'ΔI drift chart and CSV link.', tags:['evals','mirror-loop'], body:'# Update\nWe refreshed the ΔI drift chart and attached the CSV in the dataset repo.' },
+      { slug:'polite-liar-note', title:'The Polite Liar — note', date:'2025-09-20', summary:'Rewarding justified confidence.', tags:['alignment'], body:'## Idea\nShift reward from fluent certainty to calibrated justification.' }
+    ];
+
+    const idx=document.getElementById('blogIndex');
+    const postView=document.getElementById('blogPost');
+    const postMeta=document.getElementById('postMeta');
+    const postBody=document.getElementById('postBody');
+
+    function card(p){
+      const el=document.createElement('div');
+      el.className='card';
+      el.innerHTML=
+        `<div class="body"><strong>${p.title}</strong><p>${p.summary||''}</p>
+         <div style="color:var(--muted);font-size:.9rem;margin:.4rem 0 0">${p.date}${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+         <div style="margin-top:.6rem"><a class='btn' href='#blog' data-slug='${p.slug}'>Read</a></div></div>`;
+      return el;
+    }
+    function renderIndex(){ idx.innerHTML=''; POSTS.sort((a,b)=> a.date<b.date?1:-1).forEach(p=> idx.appendChild(card(p))); }
+    renderIndex();
+
+    function mdToHtml(src){
+      let s=src
+        .replace(/^###\s(.+)$/gm,'<h3>$1</h3>')
+        .replace(/^##\s(.+)$/gm,'<h2>$1</h2>')
+        .replace(/^#\s(.+)$/gm,'<h1>$1</h1>')
+        .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g,'<em>$1</em>')
+        .replace(/`([^`]+)`/g,'<code>$1</code>')
+        .replace(/\[(.*?)\]\((.*?)\)/g,'<a href="$2" target="_blank" rel="noreferrer">$1</a>')
+        .replace(/\n\n/g,'</p><p>');
+      return `<p>${s}</p>`;
+    }
+
+    function openPost(slug){
+      const p=POSTS.find(x=> x.slug===slug);
+      if(!p){ location.hash='#blog'; return; }
+      idx.style.display='none';
+      postView.style.display='block';
+      postMeta.innerHTML=`${p.date}${(p.tags||[]).length?' • '+p.tags.join(', '):''}`;
+      postBody.innerHTML=mdToHtml(p.body);
+      const url=new URL(location.href);
+      url.searchParams.set('post',slug);
+      history.replaceState({},'',url);
+    }
+    function closePost(){
+      idx.style.display='grid';
+      postView.style.display='none';
+      const url=new URL(location.href);
+      url.searchParams.delete('post');
+      history.replaceState({},'',url);
+    }
+    document.getElementById('backBtn').addEventListener('click',(e)=>{
+      e.preventDefault();
+      closePost();
+    });
+    idx.addEventListener('click',(e)=>{
+      const t=e.target.closest('a[data-slug]');
+      if(!t) return;
+      e.preventDefault();
+      openPost(t.dataset.slug);
+    });
+    const param=new URL(location.href).searchParams.get('post');
+    if(param) openPost(param);
+  </script>
+</body>
+</html>
