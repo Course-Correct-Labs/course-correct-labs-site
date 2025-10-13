@@ -136,9 +136,14 @@
     .feature-content{padding:24px 0 0;background:transparent}
     .feature-title{font-size:1.5rem;font-weight:600;margin:0 0 8px;line-height:1.2}
     .feature-desc{font-size:.95rem;color:var(--muted);line-height:1.5;margin:0}
-    .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block}
-    #work h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
-    #work .sub{font-size:1.08rem}
+    .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
+    #work h2{font-size:clamp(1.8rem,4.2vw,2.4rem);text-align:center}
+    #work .sub{font-size:1.08rem;text-align:center}
+    #evaluations h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
+    #evaluations .sub{font-size:1.08rem}
+    #evaluations .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
+    .feature-card-icon{display:flex;flex-direction:column;align-items:center;text-align:center;background:transparent;padding:0}
+    .feature-icon{width:64px;height:64px;margin-bottom:24px;fill:var(--fg);opacity:.9}
 
     /* Contact form */
     .contact-section{max-width:800px;margin:80px auto 0;padding:60px 0;background:transparent;border-radius:0;border:none}
@@ -164,7 +169,7 @@
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
         <a href="#blog">Blog</a>
-        <a href="#work">Work with us</a>
+        <a href="#work">Partner With Us</a>
       </nav>
       <button class="hamburger" id="hambtn" aria-label="Toggle menu" aria-controls="mobile" aria-expanded="false">☰</button>
     </div>
@@ -175,7 +180,7 @@
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
         <a href="#blog">Blog</a>
-        <a href="#work">Work with us</a>
+        <a href="#work">Partner With Us</a>
       </div>
     </div>
   </header>
@@ -231,13 +236,37 @@
     </section>
 
     <section id="evaluations">
-      <div class="container section-center section-pad">
-        <h2>Evaluations</h2>
-        <p class="sub narrow">Run a &lt;60s smoke test to see if your model repeats itself, stalls, or misreads time. Export CSVs and compare runs across providers.</p>
-        <div class="grid cols-3" style="margin-top:16px">
-          <div class="card"><div class="body"><strong>ΔI drift</strong><p>Mean embedding distance and n-gram novelty over iterations.</p></div></div>
-          <div class="card"><div class="body"><strong>Entropy trajectory</strong><p>Character-level entropy per turn for grounded and ungrounded runs.</p></div></div>
-          <div class="card"><div class="body"><strong>Coherence index</strong><p>LM-as-judge rubric scored 1–5 for fidelity and constraints.</p></div></div>
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow-orange">Evaluations</span>
+          <h2>Run fast. Ship confident.</h2>
+          <p class="sub narrow">Run a 60-second smoke test to catch repetition, stagnation, and time errors. Export CSVs and compare providers.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card feature-card-icon">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+            <div class="feature-content">
+              <h3 class="feature-title">ΔI Drift</h3>
+              <p class="feature-desc">Change in content across iterations. Tracks cosine distance and n-gram novelty to detect collapse toward repetition.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card-icon">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+            <div class="feature-content">
+              <h3 class="feature-title">Entropy Trajectory</h3>
+              <p class="feature-desc">Per-turn character entropy for grounded and ungrounded runs. Flat lines signal stagnation; rebounds after verification indicate healthy revision.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card-icon">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div class="feature-content">
+              <h3 class="feature-title">Coherence Index</h3>
+              <p class="feature-desc">Coherence scored 1–5 for fidelity to the prompt, constraint adherence, and internal consistency. Can be model-graded or human-rated.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
