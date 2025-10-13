@@ -193,6 +193,7 @@
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
         <a href="#work">Partner With Us</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button class="hamburger" id="hambtn" aria-label="Toggle menu" aria-controls="mobile" aria-expanded="false">☰</button>
     </div>
@@ -203,6 +204,7 @@
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
         <a href="#work">Partner With Us</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </header>
@@ -324,14 +326,17 @@
           <div class="paper-card">
             <div class="paper-icon-wrapper">
               <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v6m0 6v6M1 12h6m6 0h6"/>
-                <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/>
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
               </svg>
             </div>
             <div class="paper-content">
               <h3 class="paper-title">DI</h3>
-              <p class="paper-desc">Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</p>
+              <p class="paper-desc">Models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</p>
               <div class="paper-meta">
                 <span class="paper-meta-item"><strong>Metrics:</strong> Absorption Rate, Turn Curve</span>
                 <span class="paper-meta-item"><strong>Runtime:</strong> &lt; 60s</span>
@@ -349,7 +354,7 @@
             </div>
             <div class="paper-content">
               <h3 class="paper-title">OT</h3>
-              <p class="paper-desc">Observer-Time: anchors vs. intervals; why systems miss the lived minute.</p>
+              <p class="paper-desc">Anchors vs. intervals; why systems miss the lived minute.</p>
               <div class="paper-meta">
                 <span class="paper-meta-item"><strong>Metrics:</strong> Self-Initiation, Temporal Drift</span>
                 <span class="paper-meta-item"><strong>Runtime:</strong> &lt; 60s</span>
@@ -395,7 +400,7 @@
           </div>
         </div>
 
-        <div class="contact-section">
+        <div class="contact-section" id="contact">
           <h3 style="font-size:2rem;margin:0 0 8px;text-align:center">Get in touch</h3>
           <p style="text-align:center;color:var(--muted);margin:0">Tell us about your project and we'll get back to you within 24 hours.</p>
 
@@ -480,7 +485,7 @@
     }));
 
     // Active link highlighting
-    const ids = ['home','research','evaluations','papers','work'];
+    const ids = ['home','research','evaluations','papers','work','contact'];
     const navLinks = [...document.querySelectorAll('#menu a')];
 
     const obs = new IntersectionObserver((entries)=>{
