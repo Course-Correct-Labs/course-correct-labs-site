@@ -37,7 +37,7 @@
     .container{max-width:1120px;margin:0 auto;padding:0 1.25rem}
 
     /* nav */
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45);border-bottom:1px solid var(--border)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}
     .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
     .logo{height:48px;width:auto;display:block}
@@ -83,7 +83,8 @@
     .highlight .himg{width:100%;aspect-ratio:16/9;border-radius:12px;background:#111318;object-fit:cover;display:block}
     .highlight .body{padding:.75rem 0;text-align:center}
     .highlight .body strong{display:block;font-size:1.05rem;margin-bottom:.25rem}
-    .highlight .body p{color:var(--muted); margin:.35rem auto .5rem; max-width:36ch}
+    .highlight .body p{color:var(--muted); margin:.35rem auto .5rem; max-width:36ch;line-height:1.5}
+    .highlight .body .why{font-size:.85rem;color:rgba(255,255,255,.6);margin:.75rem auto 0;font-style:italic;max-width:38ch}
     .highlight .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
 
     .grid{display:grid;gap:16px}
@@ -115,7 +116,7 @@
     .prose p{line-height:1.75;margin:.75rem 0}
     .prose h3{margin:1.25rem 0 .5rem}
 
-    footer{border-top:1px solid var(--border);padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
+    footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
     .footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}
     .footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
     .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
@@ -174,24 +175,27 @@
           <a class="highlight" href="#papers-phi">
             <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>Phi</strong>
-              <p>RLHF optimizes for polite, fluent answers—even when evidence is thin. We test <em>justified vs. performative confidence</em> and show how to reward the right one.</p>
+              <strong>Phi — The Polite Liar</strong>
+              <p>LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.</p>
+              <p class="why">Why it matters: Confidence without justification erodes trust and misleads users.</p>
               <div class="pills"><span class="pill">Φ ratio</span> <span class="pill">Refusal fitness</span></div>
             </div>
           </a>
           <a class="highlight" href="#papers-di">
             <img class="himg" src="https://picsum.photos/seed/di/800/450" alt="Delegated Introspection image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>DI</strong>
-              <p>People now “think through” models. We map the 3-stage loop that moves reflection outside the mind and quantify the dependency it creates.</p>
+              <strong>DI — Delegated Introspection</strong>
+              <p>People now "think through" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.</p>
+              <p class="why">Why it matters: Decision quality and autonomy can drift even when no one intends manipulation.</p>
               <div class="pills"><span class="pill">Absorption rate</span> <span class="pill">Turn curve</span></div>
             </div>
           </a>
           <a class="highlight" href="#papers-ot">
             <img class="himg" src="https://picsum.photos/seed/ot/800/450" alt="Observer-Time image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>OT</strong>
-              <p>Machines can read timestamps but can’t constitute lived intervals. Benchmarks expose temporal drift and failure to self-initiate even one minute.</p>
+              <strong>OT — Observer-Time</strong>
+              <p>Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.</p>
+              <p class="why">Why it matters: This is a sharp boundary between machine processing and lived temporal experience.</p>
               <div class="pills"><span class="pill">Self-initiation</span> <span class="pill">Temporal drift</span></div>
             </div>
           </a>
@@ -357,9 +361,15 @@
     const obs = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if(e.isIntersecting){
-          navLinks.forEach(l=>l.classList.remove('active'));
+          navLinks.forEach(l=>{
+            l.classList.remove('active');
+            l.removeAttribute('aria-current');
+          });
           const link = navLinks.find(l=> l.getAttribute('href') === '#' + e.target.id);
-          if(link) link.classList.add('active');
+          if(link){
+            link.classList.add('active');
+            link.setAttribute('aria-current','page');
+          }
         }
       });
     },{rootMargin:'-45% 0px -50% 0px',threshold:0.01});
