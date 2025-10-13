@@ -66,7 +66,9 @@
     .btn.primary{background:var(--blue);border-color:var(--blue)}
 
     /* sections */
-    section{scroll-margin-top:92px;padding:80px 0}
+    section{scroll-margin-top:92px;padding:80px 0;opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease}
+    section.visible{opacity:1;transform:translateY(0)}
+    section#home{opacity:1;transform:translateY(0)}
     h2{font-size:clamp(1.5rem,3.5vw,2rem);margin:0 0 .5rem}
     .sub{color:var(--muted);max-width:740px;margin:0 auto 22px;}
     .sub.full{max-width:none}
@@ -149,6 +151,17 @@
     #papers .sub{font-size:1.08rem}
     .feature-card-icon{display:flex;flex-direction:column;align-items:center;text-align:center;background:transparent;padding:0}
     .feature-icon{width:64px;height:64px;margin-bottom:24px;fill:var(--fg);opacity:.9}
+    .paper-card{display:flex;gap:32px;align-items:flex-start;padding:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;margin-bottom:24px}
+    .paper-card:last-child{margin-bottom:0}
+    .paper-icon-wrapper{flex-shrink:0}
+    .paper-icon{width:56px;height:56px;fill:var(--fg);opacity:.9}
+    .paper-content{flex:1}
+    .paper-title{font-size:1.5rem;font-weight:600;margin:0 0 12px}
+    .paper-desc{color:var(--muted);line-height:1.6;margin:0 0 16px}
+    .paper-meta{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px;font-size:.9rem}
+    .paper-meta-item{color:var(--muted)}
+    .paper-meta-item strong{color:var(--fg)}
+    @media (max-width:768px){ .paper-card{flex-direction:column;gap:20px} }
 
     /* Contact form */
     .contact-section{max-width:800px;margin:80px auto 0;padding:60px 0;background:transparent;border-radius:0;border:none}
@@ -284,37 +297,49 @@
           <p class="sub narrow">Summaries and artifacts for ongoing work. Manuscripts are under review; content may change. Titles and venues are redacted during double-blind review. Full citations & preprints available on request.</p>
         </div>
 
-        <div class="feature-grid">
-          <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            <div class="feature-content">
-              <h3 class="feature-title">Phi</h3>
-              <p class="feature-desc" style="margin-bottom:16px">Epistemic alignment: reward justified confidence over conversational polish.</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Φ ratio, Refusal Fitness</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
-              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
+        <div style="margin-top:60px;max-width:1000px;margin-left:auto;margin-right:auto">
+          <div class="paper-card">
+            <div class="paper-icon-wrapper">
+              <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+            </div>
+            <div class="paper-content">
+              <h3 class="paper-title">Phi</h3>
+              <p class="paper-desc">Epistemic alignment: reward justified confidence over conversational polish.</p>
+              <div class="paper-meta">
+                <span class="paper-meta-item"><strong>Metrics:</strong> Φ ratio, Refusal Fitness</span>
+                <span class="paper-meta-item"><strong>Runtime:</strong> &lt; 60s</span>
+              </div>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub →</a>
             </div>
           </div>
 
-          <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
-            <div class="feature-content">
-              <h3 class="feature-title">DI</h3>
-              <p class="feature-desc" style="margin-bottom:16px">Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Absorption Rate, Turn Curve</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
-              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
+          <div class="paper-card">
+            <div class="paper-icon-wrapper">
+              <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92-.64C2.43 11.24 1 13.5 1 16c0 2.76 2.24 5 5 5 .28 0 .5-.22.5-.5s-.22-.5-.5-.5C3.57 20 2 18.43 2 16c0-2.08 1.46-3.88 3.5-4.31l1.15-.26.06-1.22C6.9 6.39 9.66 4 13 4c3.13 0 5.71 2.37 6.04 5.47l.09 1.03 1.03.11c2.16.23 3.84 2.06 3.84 4.29 0 2.43-1.97 4.4-4.4 4.4-.28 0-.5.22-.5.5s.22.5.5.5c2.98 0 5.4-2.42 5.4-5.4 0-2.71-2.01-4.97-4.62-5.35C19.58 5.32 16.56 3 13 3z"/><circle cx="9" cy="13" r="1.25"/><circle cx="15" cy="13" r="1.25"/><path d="M18 15.92c-.5 1.09-1.58 1.84-2.82 1.84-1.24 0-2.32-.75-2.82-1.84"/></svg>
+            </div>
+            <div class="paper-content">
+              <h3 class="paper-title">DI</h3>
+              <p class="paper-desc">Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</p>
+              <div class="paper-meta">
+                <span class="paper-meta-item"><strong>Metrics:</strong> Absorption Rate, Turn Curve</span>
+                <span class="paper-meta-item"><strong>Runtime:</strong> &lt; 60s</span>
+              </div>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub →</a>
             </div>
           </div>
 
-          <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-            <div class="feature-content">
-              <h3 class="feature-title">OT</h3>
-              <p class="feature-desc" style="margin-bottom:16px">Observer-Time: anchors vs. intervals; why systems miss the lived minute.</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Self-Initiation, Temporal Drift</p>
-              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
-              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
+          <div class="paper-card">
+            <div class="paper-icon-wrapper">
+              <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <div class="paper-content">
+              <h3 class="paper-title">OT</h3>
+              <p class="paper-desc">Observer-Time: anchors vs. intervals; why systems miss the lived minute.</p>
+              <div class="paper-meta">
+                <span class="paper-meta-item"><strong>Metrics:</strong> Self-Initiation, Temporal Drift</span>
+                <span class="paper-meta-item"><strong>Runtime:</strong> &lt; 60s</span>
+              </div>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub →</a>
             </div>
           </div>
         </div>
@@ -460,6 +485,19 @@
     },{rootMargin:'-45% 0px -50% 0px',threshold:0.01});
 
     ids.forEach(id=>{ const el=document.getElementById(id); if(el) obs.observe(el); });
+
+    // Scroll animations
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      scrollObserver.observe(section);
+    });
   </script>
 </body>
 </html>
