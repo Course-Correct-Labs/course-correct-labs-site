@@ -57,6 +57,7 @@
     .hero .container{ text-align:center }
     .hero .cta{ justify-content:center }
     .eyebrow{text-transform:uppercase;font-size:.7rem;letter-spacing:.18em;color:var(--muted)}
+    h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
     h1{font-size:clamp(2rem,6vw,3.5rem);margin:.5rem 0 0;line-height:1.1}
     .lead{max-width:720px;color:var(--muted);margin:.8rem auto 0}
     .cta{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.6rem}
@@ -85,7 +86,7 @@
     .highlight .body strong{display:block;font-size:1.05rem;margin-bottom:.25rem}
     .highlight .body p{color:var(--muted); margin:.35rem auto .5rem; max-width:36ch;line-height:1.5}
     .highlight .body .why{font-size:.85rem;color:rgba(255,255,255,.6);margin:.75rem auto 0;font-style:italic;max-width:38ch}
-    .highlight .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+    .highlight .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
 
     .grid{display:grid;gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -170,12 +171,12 @@
     <section id="research">
       <div class="container section-center section-pad">
         <h2>Research Highlights</h2>
-        <p class="sub narrow">Three active threads with runnable artifacts. These blurbs are plain English; details live in the Working Papers table below.</p>
+        <p class="sub narrow">Three active research threads currently under peer review. Each pairs a submitted paper with a runnable evaluation module.</p>
         <div class="highlights" style="margin-top:16px">
           <a class="highlight" href="#papers-phi">
             <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>Phi — The Polite Liar</strong>
+              <strong>Phi</strong>
               <p>LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.</p>
               <p class="why">Why it matters: Confidence without justification erodes trust and misleads users.</p>
               <div class="pills"><span class="pill">Φ ratio</span> <span class="pill">Refusal fitness</span></div>
@@ -184,7 +185,7 @@
           <a class="highlight" href="#papers-di">
             <img class="himg" src="https://picsum.photos/seed/di/800/450" alt="Delegated Introspection image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>DI — Delegated Introspection</strong>
+              <strong>DI</strong>
               <p>People now "think through" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.</p>
               <p class="why">Why it matters: Decision quality and autonomy can drift even when no one intends manipulation.</p>
               <div class="pills"><span class="pill">Absorption rate</span> <span class="pill">Turn curve</span></div>
@@ -193,7 +194,7 @@
           <a class="highlight" href="#papers-ot">
             <img class="himg" src="https://picsum.photos/seed/ot/800/450" alt="Observer-Time image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
-              <strong>OT — Observer-Time</strong>
+              <strong>OT</strong>
               <p>Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.</p>
               <p class="why">Why it matters: This is a sharp boundary between machine processing and lived temporal experience.</p>
               <div class="pills"><span class="pill">Self-initiation</span> <span class="pill">Temporal drift</span></div>
