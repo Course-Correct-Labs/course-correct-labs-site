@@ -145,6 +145,8 @@
     #research h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
     #research .sub{font-size:1.08rem}
     #research .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
+    #papers h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
+    #papers .sub{font-size:1.08rem}
     .feature-card-icon{display:flex;flex-direction:column;align-items:center;text-align:center;background:transparent;padding:0}
     .feature-icon{width:64px;height:64px;margin-bottom:24px;fill:var(--fg);opacity:.9}
 
@@ -171,7 +173,6 @@
         <a href="#research">Research</a>
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
-        <a href="#blog">Blog</a>
         <a href="#work">Partner With Us</a>
       </nav>
       <button class="hamburger" id="hambtn" aria-label="Toggle menu" aria-controls="mobile" aria-expanded="false">☰</button>
@@ -182,7 +183,6 @@
         <a href="#research">Research</a>
         <a href="#evaluations">Evaluations</a>
         <a href="#papers">Working Papers</a>
-        <a href="#blog">Blog</a>
         <a href="#work">Partner With Us</a>
       </div>
     </div>
@@ -205,7 +205,6 @@
     <section id="research">
       <div class="container">
         <div class="section-center">
-          <span class="eyebrow-orange">Research</span>
           <h2>Research Highlights</h2>
           <p class="sub narrow">Three active research threads currently under peer review. Each pairs a submitted paper with a runnable evaluation module.</p>
         </div>
@@ -278,44 +277,43 @@
     </section>
 
     <section id="papers">
-      <div class="container section-center section-pad">
-        <h2>Research Modules</h2>
-        <p class="sub narrow">Summaries and artifacts for ongoing work. Manuscripts are under review; content may change.</p>
-        <div class="notice" style="margin-top:10px">🔒 <strong>Anonymization:</strong> Titles and venues are redacted during double-blind review. Full citations & preprints available on request.</div>
-        <div class="card" style="margin-top:16px">
-          <div class="body">
-            <div style="overflow:auto">
-              <table>
-                <thead>
-                  <tr><th>Label</th><th>Focus</th><th>Key Metrics</th><th>Try it</th><th>Runtime</th><th>Status</th></tr>
-                </thead>
-                <tbody>
-                  <tr id="papers-phi">
-                    <td><strong>Phi</strong></td>
-                    <td>Epistemic alignment: reward justified confidence over conversational polish.</td>
-                    <td>Φ ratio; Refusal Fitness</td>
-                    <td>Working paper (under review)</td>
-                    <td>&lt; 60s</td>
-                    <td>Under review</td>
-                  </tr>
-                  <tr id="papers-di">
-                    <td><strong>DI</strong></td>
-                    <td>Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</td>
-                    <td>Absorption Rate; Turn Curve</td>
-                    <td>Working paper (under review)</td>
-                    <td>&lt; 60s</td>
-                    <td>Under review</td>
-                  </tr>
-                  <tr id="papers-ot">
-                    <td><strong>OT</strong></td>
-                    <td>Observer-Time: anchors vs. intervals; why systems miss the lived minute.</td>
-                    <td>Self-Initiation; Temporal Drift</td>
-                    <td>Working paper (under review)</td>
-                    <td>&lt; 60s</td>
-                    <td>Under review</td>
-                  </tr>
-                </tbody>
-              </table>
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow-orange">Working Papers</span>
+          <h2>Research Modules</h2>
+          <p class="sub narrow">Summaries and artifacts for ongoing work. Manuscripts are under review; content may change.</p>
+        </div>
+
+        <div class="notice" style="margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto">🔒 <strong>Anonymization:</strong> Titles and venues are redacted during double-blind review. Full citations & preprints available on request.</div>
+
+        <div class="feature-grid">
+          <div class="feature-card feature-card-icon">
+            <div class="feature-content">
+              <h3 class="feature-title">Phi</h3>
+              <p class="feature-desc" style="margin-bottom:16px">Epistemic alignment: reward justified confidence over conversational polish.</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Φ ratio, Refusal Fitness</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card-icon">
+            <div class="feature-content">
+              <h3 class="feature-title">DI</h3>
+              <p class="feature-desc" style="margin-bottom:16px">Delegated introspection: models as co-authors of reasons; mapping the prompt → reflection → reintegration loop.</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Absorption Rate, Turn Curve</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card-icon">
+            <div class="feature-content">
+              <h3 class="feature-title">OT</h3>
+              <p class="feature-desc" style="margin-bottom:16px">Observer-Time: anchors vs. intervals; why systems miss the lived minute.</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:12px"><strong>Metrics:</strong> Self-Initiation, Temporal Drift</p>
+              <p class="feature-desc" style="font-size:.85rem;margin-bottom:16px"><strong>Runtime:</strong> &lt; 60s</p>
+              <a href="https://github.com/Course-Correct-Labs/ai-agency-evals" target="_blank" rel="noopener noreferrer" class="btn" style="margin:0 auto">View on GitHub →</a>
             </div>
           </div>
         </div>
@@ -400,17 +398,6 @@
       </div>
     </section>
 
-    <section id="blog">
-      <div class="container section-center section-pad">
-        <h2>Blog</h2>
-        <p class="sub narrow">Markdown posts. No dashboard. Commit and deploy.</p>
-        <div class="grid cols-2" id="blogIndex" style="margin-top:16px"></div>
-        <div id="blogPost" style="margin-top:16px; display:none" aria-hidden="true">
-          <div class="card"><div class="body"><div id="postMeta" style="color:var(--muted); font-size:.9rem"></div><div class="prose" id="postBody"></div><div style="margin-top:12px"><a class="btn" href="#blog" id="backBtn">← Back to blog</a></div></div></div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -452,7 +439,7 @@
     }));
 
     // Active link highlighting
-    const ids = ['home','research','evaluations','papers','blog','work'];
+    const ids = ['home','research','evaluations','papers','work'];
     const navLinks = [...document.querySelectorAll('#menu a')];
 
     const obs = new IntersectionObserver((entries)=>{
@@ -472,75 +459,6 @@
     },{rootMargin:'-45% 0px -50% 0px',threshold:0.01});
 
     ids.forEach(id=>{ const el=document.getElementById(id); if(el) obs.observe(el); });
-
-    // Tiny in-page blog (no build): define posts here
-    const POSTS=[
-      { slug:'mirror-loop-figures', title:'Mirror Loop figures update', date:'2025-10-11', summary:'ΔI drift chart and CSV link.', tags:['evals','mirror-loop'], body:'# Update\nWe refreshed the ΔI drift chart and attached the CSV in the dataset repo.' },
-      { slug:'polite-liar-note', title:'The Polite Liar — note', date:'2025-09-20', summary:'Rewarding justified confidence.', tags:['alignment'], body:'## Idea\nShift reward from fluent certainty to calibrated justification.' }
-    ];
-
-    const idx=document.getElementById('blogIndex');
-    const postView=document.getElementById('blogPost');
-    const postMeta=document.getElementById('postMeta');
-    const postBody=document.getElementById('postBody');
-
-    function card(p){
-      const el=document.createElement('div');
-      el.className='card';
-      el.innerHTML=
-        `<div class="body"><strong>${p.title}</strong><p>${p.summary||''}</p>
-         <div style="color:var(--muted);font-size:.9rem;margin:.4rem 0 0">${p.date}${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
-         <div style="margin-top:.6rem"><a class='btn' href='#blog' data-slug='${p.slug}'>Read</a></div></div>`;
-      return el;
-    }
-    function renderIndex(){ idx.innerHTML=''; POSTS.sort((a,b)=> a.date<b.date?1:-1).forEach(p=> idx.appendChild(card(p))); }
-    renderIndex();
-
-    function mdToHtml(src){
-      let s=src
-        .replace(/^###\s(.+)$/gm,'<h3>$1</h3>')
-        .replace(/^##\s(.+)$/gm,'<h2>$1</h2>')
-        .replace(/^#\s(.+)$/gm,'<h1>$1</h1>')
-        .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g,'<em>$1</em>')
-        .replace(/`([^`]+)`/g,'<code>$1</code>')
-        .replace(/\[(.*?)\]\((.*?)\)/g,'<a href="$2" target="_blank" rel="noreferrer">$1</a>')
-        .replace(/\n\n/g,'</p><p>');
-      return `<p>${s}</p>`;
-    }
-
-    function openPost(slug){
-      const p=POSTS.find(x=> x.slug===slug);
-      if(!p){ location.hash='#blog'; return; }
-      idx.style.display='none';
-      postView.style.display='block';
-      postView.setAttribute('aria-hidden','false');
-      postMeta.innerHTML=`${p.date}${(p.tags||[]).length?' • '+p.tags.join(', '):''}`;
-      postBody.innerHTML=mdToHtml(p.body);
-      const url=new URL(location.href);
-      url.searchParams.set('post',slug);
-      history.replaceState({},'',url);
-    }
-    function closePost(){
-      idx.style.display='grid';
-      postView.style.display='none';
-      postView.setAttribute('aria-hidden','true');
-      const url=new URL(location.href);
-      url.searchParams.delete('post');
-      history.replaceState({},'',url);
-    }
-    document.getElementById('backBtn').addEventListener('click',(e)=>{
-      e.preventDefault();
-      closePost();
-    });
-    idx.addEventListener('click',(e)=>{
-      const t=e.target.closest('a[data-slug]');
-      if(!t) return;
-      e.preventDefault();
-      openPost(t.dataset.slug);
-    });
-    const param=new URL(location.href).searchParams.get('post');
-    if(param) openPost(param);
   </script>
 </body>
 </html>
