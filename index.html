@@ -142,6 +142,9 @@
     #evaluations h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
     #evaluations .sub{font-size:1.08rem}
     #evaluations .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
+    #research h2{font-size:clamp(1.8rem,4.2vw,2.4rem)}
+    #research .sub{font-size:1.08rem}
+    #research .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
     .feature-card-icon{display:flex;flex-direction:column;align-items:center;text-align:center;background:transparent;padding:0}
     .feature-icon{width:64px;height:64px;margin-bottom:24px;fill:var(--fg);opacity:.9}
 
@@ -162,7 +165,7 @@
 <body>
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
-      <div class="brand"><img src="assets/images/logo.png" alt="Course Correct Labs" class="logo" /></div>
+      <a href="#home" class="brand"><img src="assets/images/logo.png" alt="Course Correct Labs" class="logo" /></a>
       <nav class="menu" id="menu">
         <a href="#home" class="active">Home</a>
         <a href="#research">Research</a>
@@ -200,9 +203,12 @@
 
     <!-- Research highlights -->
     <section id="research">
-      <div class="container section-center section-pad">
-        <h2>Research Highlights</h2>
-        <p class="sub narrow">Three active research threads currently under peer review. Each pairs a submitted paper with a runnable evaluation module.</p>
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow-orange">Research</span>
+          <h2>Research Highlights</h2>
+          <p class="sub narrow">Three active research threads currently under peer review. Each pairs a submitted paper with a runnable evaluation module.</p>
+        </div>
         <div class="highlights" style="margin-top:16px">
           <a class="highlight" href="#papers">
             <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
