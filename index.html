@@ -50,17 +50,18 @@
     .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
 
     /* hero */
-    .hero{position:relative;padding:104px 0 80px;background:
+    .hero{position:relative;padding:120px 0 100px;background:
       radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),
       radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),
-      radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%)}
+      radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%),
+      linear-gradient(to bottom, transparent 0%, var(--bg) 100%)}
     .hero .container{ text-align:center }
     .hero .cta{ justify-content:center }
-    .eyebrow{text-transform:uppercase;font-size:.7rem;letter-spacing:.18em;color:var(--muted)}
+    .eyebrow{text-transform:uppercase;font-size:.7rem;letter-spacing:.18em;color:var(--muted);margin-bottom:1rem}
     h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
-    h1{font-size:clamp(2rem,6vw,3.5rem);margin:.5rem 0 0;line-height:1.1}
-    .lead{max-width:720px;color:var(--muted);margin:.8rem auto 0}
-    .cta{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.6rem}
+    h1{font-size:clamp(2rem,6vw,3.5rem);margin:1.5rem 0;line-height:1.1}
+    .lead{max-width:720px;color:var(--muted);margin:1.5rem auto 0}
+    .cta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg)}
     .btn.primary{background:var(--blue);border-color:var(--blue)}
 
@@ -173,7 +174,7 @@
         <h2>Research Highlights</h2>
         <p class="sub narrow">Three active research threads currently under peer review. Each pairs a submitted paper with a runnable evaluation module.</p>
         <div class="highlights" style="margin-top:16px">
-          <a class="highlight" href="#papers-phi">
+          <a class="highlight" href="#papers">
             <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
               <strong>Phi</strong>
@@ -182,7 +183,7 @@
               <div class="pills"><span class="pill">Φ ratio</span> <span class="pill">Refusal fitness</span></div>
             </div>
           </a>
-          <a class="highlight" href="#papers-di">
+          <a class="highlight" href="#papers">
             <img class="himg" src="https://picsum.photos/seed/di/800/450" alt="Delegated Introspection image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
               <strong>DI</strong>
@@ -191,7 +192,7 @@
               <div class="pills"><span class="pill">Absorption rate</span> <span class="pill">Turn curve</span></div>
             </div>
           </a>
-          <a class="highlight" href="#papers-ot">
+          <a class="highlight" href="#papers">
             <img class="himg" src="https://picsum.photos/seed/ot/800/450" alt="Observer-Time image placeholder" loading="lazy" referrerpolicy="no-referrer" />
             <div class="body">
               <strong>OT</strong>
@@ -218,7 +219,7 @@
 
     <section id="papers">
       <div class="container section-center section-pad">
-        <h2>Research Modules (Working Papers)</h2>
+        <h2>Research Modules</h2>
         <p class="sub narrow">Summaries and artifacts for ongoing work. Manuscripts are under review; content may change.</p>
         <div class="notice" style="margin-top:10px">🔒 <strong>Anonymization:</strong> Titles and venues are redacted during double-blind review. Full citations & preprints available on request.</div>
         <div class="card" style="margin-top:16px">
