@@ -131,11 +131,11 @@
     /* Apple-inspired sections */
     .feature-grid{display:grid;gap:40px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:60px}
     @media (max-width:1024px){ .feature-grid{grid-template-columns:1fr} }
-    .feature-card{border-radius:24px;overflow:hidden;background:transparent;display:flex;flex-direction:column}
-    .feature-img{width:100%;height:280px;object-fit:cover;border-radius:20px;display:block}
+    .feature-card{border-radius:24px;overflow:visible;background:transparent;display:flex;flex-direction:column}
+    .feature-img{width:100%;height:378px;object-fit:cover;border-radius:20px;display:block}
     .feature-content{padding:24px 0 0;background:transparent}
-    .feature-title{font-size:1.5rem;font-weight:600;margin:0 0 8px;line-height:1.2}
-    .feature-desc{font-size:.95rem;color:var(--muted);line-height:1.5;margin:0}
+    .feature-title{font-size:1.5rem;font-weight:600;margin:0 0 8px;line-height:1.2;text-align:center}
+    .feature-desc{font-size:.95rem;color:var(--muted);line-height:1.5;margin:0;text-align:center}
     .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
     #work h2{font-size:clamp(1.8rem,4.2vw,2.4rem);text-align:center}
     #work .sub{font-size:1.08rem;text-align:center}
@@ -245,7 +245,7 @@
 
         <div class="feature-grid">
           <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
             <div class="feature-content">
               <h3 class="feature-title">ΔI Drift</h3>
               <p class="feature-desc">Change in content across iterations. Tracks cosine distance and n-gram novelty to detect collapse toward repetition.</p>
