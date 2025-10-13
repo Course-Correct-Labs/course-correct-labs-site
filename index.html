@@ -84,7 +84,7 @@
     .highlights{display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
     @media (max-width:800px){ .highlights{grid-template-columns:1fr} }
     .highlight{background:transparent;border:none;border-radius:14px;overflow:hidden;padding:0;display:flex;flex-direction:column;gap:10px}
-    .highlight .himg{width:100%;aspect-ratio:16/9;border-radius:12px;background:#111318;object-fit:cover;display:block}
+    .highlight .himg{width:100%;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block}
     .highlight .body{padding:.75rem 0;text-align:center}
     .highlight .body strong{display:block;font-size:1.05rem;margin-bottom:.25rem}
     .highlight .body p{color:var(--muted); margin:.35rem auto .5rem; max-width:36ch;line-height:1.5}
@@ -154,7 +154,7 @@
     .paper-card{display:flex;gap:32px;align-items:flex-start;padding:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;margin-bottom:24px}
     .paper-card:last-child{margin-bottom:0}
     .paper-icon-wrapper{flex-shrink:0}
-    .paper-icon{width:56px;height:56px;fill:var(--fg);opacity:.9;stroke:var(--fg)}
+    .paper-icon{width:56px;height:56px;fill:var(--fg);opacity:.9;stroke:var(--fg);stroke-width:1}
     .paper-content{flex:1}
     .paper-title{font-size:1.5rem;font-weight:600;margin:0 0 12px}
     .paper-desc{color:var(--muted);line-height:1.6;margin:0 0 16px}
@@ -229,7 +229,7 @@
         </div>
         <div class="highlights" style="margin-top:16px">
           <a class="highlight" href="#papers">
-            <img class="himg" src="https://picsum.photos/seed/phi/800/450" alt="Phi research image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <img class="himg" src="assets/images/phi-research.png" alt="Phi research visualization" loading="lazy" />
             <div class="body">
               <strong>Phi</strong>
               <p>LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.</p>
@@ -238,7 +238,7 @@
             </div>
           </a>
           <a class="highlight" href="#papers">
-            <img class="himg" src="https://picsum.photos/seed/di/800/450" alt="Delegated Introspection image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <img class="himg" src="assets/images/di-research.png" alt="Delegated Introspection visualization" loading="lazy" />
             <div class="body">
               <strong>DI</strong>
               <p>People now "think through" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.</p>
@@ -247,7 +247,7 @@
             </div>
           </a>
           <a class="highlight" href="#papers">
-            <img class="himg" src="https://picsum.photos/seed/ot/800/450" alt="Observer-Time image placeholder" loading="lazy" referrerpolicy="no-referrer" />
+            <img class="himg" src="assets/images/ot-research.png" alt="Observer-Time visualization" loading="lazy" />
             <div class="body">
               <strong>OT</strong>
               <p>Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.</p>
@@ -321,20 +321,16 @@
 
           <div class="paper-card">
             <div class="paper-icon-wrapper">
-              <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 4.5c-3 0-5.5 2-6.5 4.5-.5 1.5-.5 3 0 4.5 1 2.5 3.5 4.5 6.5 4.5s5.5-2 6.5-4.5c.5-1.5.5-3 0-4.5-1-2.5-3.5-4.5-6.5-4.5z"/>
-                <path d="M9 10.5c0 .5.4 1 1 1s1-.5 1-1-.4-1-1-1-1 .4-1 1z"/>
-                <path d="M13 10.5c0 .5.4 1 1 1s1-.5 1-1-.4-1-1-1-1 .4-1 1z"/>
-                <path d="M7.5 12c-.2.5-.5 1-.5 1.5"/>
-                <path d="M16.5 12c.2.5.5 1 .5 1.5"/>
-                <path d="M12 3v1.5"/>
-                <path d="M12 19.5V21"/>
-                <path d="M4.9 6.4l1.1 1"/>
-                <path d="M18 16.6l1.1 1"/>
-                <path d="M3 12h1.5"/>
-                <path d="M19.5 12H21"/>
-                <path d="M4.9 17.6l1.1-1"/>
-                <path d="M18 7.4l1.1-1"/>
+              <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5C8.5 5 6 7 5 9.5c-.5 1.2-.5 2.6 0 3.8C6 15.8 8.5 18 12 18s6-2.2 7-5.2c.5-1.2.5-2.6 0-3.8C18 7 15.5 5 12 5z"/>
+                <circle cx="9.5" cy="10" r=".8"/>
+                <circle cx="14.5" cy="10" r=".8"/>
+                <path d="M8.5 12.5c.3.8.8 1.5 1.5 2"/>
+                <path d="M15.5 12.5c-.3.8-.8 1.5-1.5 2"/>
+                <path d="M9 8c0-.5-.3-1-.8-1.3"/>
+                <path d="M15 8c0-.5.3-1 .8-1.3"/>
+                <path d="M7 11.5c-.5.3-1 .5-1.5.5"/>
+                <path d="M17 11.5c.5.3 1 .5 1.5.5"/>
               </svg>
             </div>
             <div class="paper-content">
