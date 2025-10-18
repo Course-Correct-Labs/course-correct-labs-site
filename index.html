@@ -404,7 +404,7 @@
           <h3 style="font-size:2rem;margin:0 0 8px;text-align:center">Get in touch</h3>
           <p style="text-align:center;color:var(--muted);margin:0">Tell us about your project and we'll get back to you within 24 hours.</p>
 
-          <form class="form-grid" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form id="contact-form" class="form-grid" action="https://formspree.io/f/xdkwbvlq" method="POST">
             <div class="form-grid form-grid-2">
               <div class="form-group">
                 <label for="name">Name *</label>
@@ -438,7 +438,9 @@
               <textarea id="message" name="message" required placeholder="Tell us about your needs and timeline..."></textarea>
             </div>
 
-            <button type="submit" class="form-submit">Send Message</button>
+            <div id="form-status" role="status" aria-live="polite" style="text-align:center;margin-top:16px;font-size:.95rem;display:none"></div>
+
+            <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
           </form>
         </div>
       </div>
@@ -517,6 +519,54 @@
 
     document.querySelectorAll('section').forEach(section => {
       scrollObserver.observe(section);
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formStatus.style.display = 'none';
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch('https://formspree.io/f/xdkwbvlq', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success
+          formStatus.textContent = 'Message sent successfully — thank you!';
+          formStatus.style.color = '#14b8a6';
+          formStatus.style.display = 'block';
+          contactForm.reset();
+        } else {
+          // Error from Formspree
+          formStatus.textContent = 'There was a problem sending your message. Please try again.';
+          formStatus.style.color = '#ef4444';
+          formStatus.style.display = 'block';
+        }
+      } catch (error) {
+        // Network error
+        formStatus.textContent = 'There was a problem sending your message. Please try again.';
+        formStatus.style.color = '#ef4444';
+        formStatus.style.display = 'block';
+      } finally {
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
     });
   </script>
 </body>
