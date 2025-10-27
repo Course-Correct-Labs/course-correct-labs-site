@@ -282,7 +282,7 @@
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Recursive Non-Convergence in Generative Reasoning Systems</p>
               <p>Large language models often appear reflective but are merely recursive—turning their own answers into inputs, mistaking reformulation for progress. The Mirror Loop quantifies this non-convergence across architectures, showing that ungrounded self-critique produces motion without movement. It's the first empirical map of generative reasoning collapse and a blueprint for detecting "stalled cognition" in AI systems.</p>
               <div class="pills" style="margin-top:1rem">
-                <a href="https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop_demo.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
                 <a href="https://github.com/Course-Correct-Labs/mirror-loop" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
               </div>
             </div>
@@ -294,7 +294,7 @@
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Why Reasoning Prompts Backfire and Grounding Works (Sometimes)</p>
               <p>When language models "reflect," they often fabricate. Recursive Confabulation shows how models reuse their own fictions as evidence, creating self-reinforcing belief loops that mimic understanding. Safety interventions meant to fix this—like reasoning or audit prompts—actually worsen the problem. Grounding helps, but unevenly across architectures. The study reframes hallucination as semantic compression: rising certainty, falling truth.</p>
               <div class="pills" style="margin-top:1rem">
-                <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/recursive_confabulation.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
                 <a href="https://github.com/Course-Correct-Labs/recursive-confabulation" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
               </div>
             </div>
@@ -325,9 +325,11 @@
         <div class="feature-grid cols-4">
           <div class="feature-card feature-card-icon">
             <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="9" cy="10" r="0.5"/>
+              <circle cx="12" cy="10" r="0.5"/>
+              <circle cx="15" cy="10" r="0.5"/>
+              <path d="M8 14h8"/>
             </svg>
             <div class="feature-content">
               <h3 class="feature-title">Φ-ratio</h3>
@@ -338,12 +340,9 @@
 
           <div class="feature-card feature-card-icon">
             <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-              <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-              <polyline points="21 12 16.5 14.6 16.5 19.79"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8l-4 4-4-4"/>
+              <path d="M16 12l-4 4-4-4"/>
             </svg>
             <div class="feature-content">
               <h3 class="feature-title">Absorption Rate</h3>
