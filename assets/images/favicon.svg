@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#000000"/>
+  <g transform="translate(256 256)">
+    <!-- Center C -->
+    <circle cx="0" cy="0" r="45" stroke="#ffffff" stroke-width="20" fill="none"/>
+
+    <!-- Inner ring segments -->
+    <path d="M 0,-75 A 75,75 0 0,1 53,-53" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M 53,53 A 75,75 0 0,1 0,75" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M 0,75 A 75,75 0 0,1 -53,53" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+    <!-- Middle ring segments -->
+    <path d="M 53,-53 A 105,105 0 0,1 105,0" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M -53,-53 A 105,105 0 0,0 -105,0" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M -53,53 A 105,105 0 0,1 -105,0" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+    <!-- Outer ring segments -->
+    <path d="M 0,-135 A 135,135 0 0,1 95,-95" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M 95,95 A 135,135 0 0,1 0,135" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M -95,-95 A 135,135 0 0,0 -135,0" stroke="#ffffff" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+    <!-- Cardinal points/arrows -->
+    <polygon points="0,-165 -15,-135 15,-135" fill="#ffffff"/>
+    <polygon points="165,0 135,15 135,-15" fill="#ffffff"/>
+    <polygon points="0,165 15,135 -15,135" fill="#ffffff"/>
+    <polygon points="-165,0 -135,-15 -135,15" fill="#ffffff"/>
+  </g>
+</svg>
