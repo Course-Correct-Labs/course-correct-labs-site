@@ -12,14 +12,16 @@
   <meta property="og:url" content="https://course-correct-labs.github.io/course-correct-labs-site/" />
   <meta property="og:title" content="Course Correct Labs — AI Research & Evaluation" />
   <meta property="og:description" content="Reproducible evaluations for AI behavior: confidence calibration, temporal drift, and delegated introspection." />
-  <meta property="og:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/logo.png" />
+  <meta property="og:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://course-correct-labs.github.io/course-correct-labs-site/" />
   <meta property="twitter:title" content="Course Correct Labs — AI Research & Evaluation" />
   <meta property="twitter:description" content="Reproducible evaluations for AI behavior: confidence calibration, temporal drift, and delegated introspection." />
-  <meta property="twitter:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/logo.png" />
+  <meta property="twitter:image" content="https://course-correct-labs.github.io/course-correct-labs-site/assets/images/og-image.png" />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://course-correct-labs.github.io/course-correct-labs-site/" />
@@ -131,7 +133,8 @@
     .feature-grid{display:grid;gap:40px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:60px}
     .feature-grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
     @media (max-width:1024px){ .feature-grid{grid-template-columns:1fr} .feature-grid.cols-4{grid-template-columns:1fr} }
-    .feature-card{border-radius:24px;overflow:visible;background:transparent;display:flex;flex-direction:column}
+    .feature-card{border-radius:24px;overflow:visible;background:transparent;display:flex;flex-direction:column;transition:transform .2s}
+    .feature-card:hover{transform:translateY(-4px)}
     .feature-img{width:100%;height:417px;object-fit:cover;border-radius:20px;display:block}
     .feature-content{padding:24px 0 0;background:transparent}
     .feature-title{font-size:1.5rem;font-weight:600;margin:0 0 8px;line-height:1.2;text-align:center}
@@ -212,7 +215,7 @@
         <h1>Course Correct the Future.</h1>
         <p class="lead">Keep AI useful, honest, and on our side.</p>
         <div class="cta">
-          <a class="btn primary" href="#research">Explore research →</a>
+          <a class="btn primary" href="#studies">Explore Studies →</a>
           <a class="btn" href="#evaluations">Run evaluations</a>
         </div>
       </div>
@@ -371,29 +374,29 @@
         </div>
 
         <div class="feature-grid">
-          <div class="feature-card">
+          <a href="#contact" class="feature-card" style="text-decoration:none;color:inherit">
             <img class="feature-img" src="assets/images/evaluation-design.png" alt="Evaluation Design" loading="lazy" />
             <div class="feature-content">
               <h3 class="feature-title">Evaluation Design</h3>
               <p class="feature-desc">Lightweight suites for confidence calibration, temporal behavior, and semantic drift. Tests run in under 60 seconds.</p>
             </div>
-          </div>
+          </a>
 
-          <div class="feature-card">
+          <a href="#contact" class="feature-card" style="text-decoration:none;color:inherit">
             <img class="feature-img" src="assets/images/integration-tooling.png" alt="Integration & Tooling" loading="lazy" />
             <div class="feature-content">
               <h3 class="feature-title">Integration & Tooling</h3>
               <p class="feature-desc">Multi-provider adapters, CI pipelines, and CSV exports. Deploy smoke tests or full harnesses across your stack.</p>
             </div>
-          </div>
+          </a>
 
-          <div class="feature-card">
+          <a href="#contact" class="feature-card" style="text-decoration:none;color:inherit">
             <img class="feature-img" src="assets/images/partner-delivery.png" alt="Partner Delivery" loading="lazy" />
             <div class="feature-content">
               <h3 class="feature-title">Partner Delivery</h3>
               <p class="feature-desc">Short reports, pilot studies, and delta measurements before and after fixes. Grounded recommendations you can ship.</p>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="contact-section" id="contact">
