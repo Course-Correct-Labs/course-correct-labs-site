@@ -82,7 +82,8 @@
     .section-pad .sub{ margin-bottom: 44px; }
     /* research highlights (image tiles) */
     .highlights{display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
-    @media (max-width:800px){ .highlights{grid-template-columns:1fr} }
+    .highlights.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+    @media (max-width:800px){ .highlights{grid-template-columns:1fr} .highlights.cols-3{grid-template-columns:1fr} }
     .highlight{background:transparent;border:none;border-radius:14px;overflow:hidden;padding:0;display:flex;flex-direction:column;gap:10px}
     .highlight .himg{width:100%;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block}
     .highlight .body{padding:.75rem 0;text-align:center}
@@ -228,37 +229,37 @@
           <a class="highlight" href="#papers">
             <img class="himg" src="assets/images/phi-research.png" alt="Phi research visualization" loading="lazy" />
             <div class="body">
-              <strong>Phi</strong>
+              <strong>The Polite Liar</strong>
+              <p style="font-style:italic;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.25rem">Resubmitted after major revisions</p>
               <p>LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.</p>
               <p class="why">Why it matters: Confidence without justification erodes trust and misleads users.</p>
-              <div class="pills"><span class="pill">Φ ratio</span> <span class="pill">Refusal fitness</span></div>
             </div>
           </a>
           <a class="highlight" href="#papers">
             <img class="himg" src="assets/images/di-research.png" alt="Delegated Introspection visualization" loading="lazy" />
             <div class="body">
-              <strong>DI</strong>
+              <strong>Delegated Introspection</strong>
+              <p style="font-style:italic;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.25rem">Under peer review</p>
               <p>People now "think through" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.</p>
               <p class="why">Why it matters: Decision quality and autonomy can drift even when no one intends manipulation.</p>
-              <div class="pills"><span class="pill">Absorption rate</span> <span class="pill">Turn curve</span></div>
             </div>
           </a>
           <a class="highlight" href="#papers">
             <img class="himg" src="assets/images/ot-research.png" alt="Observer-Time visualization" loading="lazy" />
             <div class="body">
-              <strong>OT</strong>
+              <strong>Observer-Time</strong>
+              <p style="font-style:italic;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.25rem">With editor</p>
               <p>Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.</p>
               <p class="why">Why it matters: This is a sharp boundary between machine processing and lived temporal experience.</p>
-              <div class="pills"><span class="pill">Self-initiation</span> <span class="pill">Temporal drift</span></div>
             </div>
           </a>
           <a class="highlight" href="#papers">
             <img class="himg" src="assets/images/anchor-interval-hypothesis-research.png" alt="Anchor-Interval Hypothesis visualization" loading="lazy" />
             <div class="body">
-              <strong>AIH</strong>
+              <strong>Anchor–Interval Hypothesis</strong>
+              <p style="font-style:italic;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.25rem">Under peer review</p>
               <p>Lived time unfolds between anchors—public events that mark experience—and the intervals that stretch between them. The hypothesis defines a measurable density of experience mapped to relativistic proper time, forming the groundwork for Observer-Time.</p>
               <p class="why">Why it matters: AIH formalizes the structure of lived duration itself, turning phenomenology into a falsifiable framework for temporal consciousness.</p>
-              <div class="pills"><span class="pill">Anchors</span> <span class="pill">Intervals</span> <span class="pill">Measurement</span></div>
             </div>
           </a>
         </div>
@@ -269,10 +270,11 @@
     <section id="studies">
       <div class="container">
         <div class="section-center">
-          <h2>Studies</h2>
-          <p class="sub narrow">Three empirical investigations into how models reason, confabulate, and maintain coherence under recursive pressure.</p>
+          <span class="eyebrow-orange">Studies</span>
+          <h2>Three empirical investigations into model reasoning.</h2>
+          <p class="sub narrow">Each study pairs a runnable Colab with a public repo for reproducibility.</p>
         </div>
-        <div class="highlights" style="margin-top:16px">
+        <div class="highlights cols-3" style="margin-top:60px">
           <a class="highlight" href="https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop.ipynb" target="_blank" rel="noopener noreferrer">
             <img class="himg" src="assets/images/mirror-loop-studies.png" alt="Mirror Loop study visualization" loading="lazy" />
             <div class="body">
