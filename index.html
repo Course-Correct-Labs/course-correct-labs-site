@@ -156,7 +156,9 @@
     #research .sub{font-size:1.08rem}
     #research .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
     .feature-card-icon{display:flex;flex-direction:column;align-items:center;text-align:center;background:transparent;padding:0}
-    .feature-icon{width:64px;height:64px;margin-bottom:24px;stroke:var(--fg);fill:none;opacity:.9}
+    .feature-icon{width:64px;height:64px;margin-bottom:24px;opacity:.9}
+    .feature-icon-outline{stroke:var(--fg);fill:none}
+    .feature-icon-solid{fill:var(--fg);stroke:none}
     .paper-card{display:flex;gap:32px;align-items:flex-start;padding:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;margin-bottom:24px}
     .paper-card:last-child{margin-bottom:0}
     .paper-icon-wrapper{flex-shrink:0}
@@ -334,7 +336,7 @@
 
         <div class="feature-grid cols-4">
           <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg class="feature-icon feature-icon-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             <div class="feature-content">
               <h3 class="feature-title">Φ-ratio</h3>
               <p class="feature-desc" style="font-style:italic;margin-bottom:8px">What it measures</p>
@@ -343,7 +345,7 @@
           </div>
 
           <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <svg class="feature-icon feature-icon-outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
             <div class="feature-content">
               <h3 class="feature-title">Absorption Rate</h3>
               <p class="feature-desc" style="font-style:italic;margin-bottom:8px">What it measures</p>
@@ -352,7 +354,7 @@
           </div>
 
           <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+            <svg class="feature-icon feature-icon-solid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
             <div class="feature-content">
               <h3 class="feature-title">ΔI Drift</h3>
               <p class="feature-desc" style="font-style:italic;margin-bottom:8px">What it measures</p>
@@ -361,7 +363,7 @@
           </div>
 
           <div class="feature-card feature-card-icon">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+            <svg class="feature-icon feature-icon-solid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
             <div class="feature-content">
               <h3 class="feature-title">Entropy Trajectory</h3>
               <p class="feature-desc" style="font-style:italic;margin-bottom:8px">What it measures</p>
