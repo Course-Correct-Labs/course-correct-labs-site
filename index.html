@@ -100,7 +100,7 @@
     .highlights.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
     .highlights.horizontal{display:flex;flex-direction:column;gap:24px}
     .highlights.horizontal .highlight{flex-direction:row;gap:40px;align-items:center}
-    .highlights.horizontal .highlight .himg{width:40%;max-width:420px;flex-shrink:0;aspect-ratio:3/2}
+    .highlights.horizontal .highlight .himg{width:40%;max-width:420px;flex-shrink:0;aspect-ratio:1/1}
     .highlights.horizontal .highlight .body{padding:0;text-align:left;flex:1}
     @media (max-width:800px){
       .highlights{grid-template-columns:1fr}
@@ -324,7 +324,10 @@
         </div>
         <div class="highlights horizontal" style="margin-top:60px">
           <div class="highlight">
-            <img class="himg" src="assets/images/mirror-loop-studies.png" alt="Mirror Loop study visualization" loading="lazy" />
+            <picture>
+              <source media="(min-width: 801px)" srcset="assets/images/mirror-loop-studies-desktop.png" />
+              <img class="himg" src="assets/images/mirror-loop-studies.png" alt="Mirror Loop study visualization" loading="lazy" />
+            </picture>
             <div class="body">
               <strong>The Mirror Loop</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Recursive Non-Convergence in Generative Reasoning Systems</p>
@@ -337,7 +340,10 @@
             </div>
           </div>
           <div class="highlight">
-            <img class="himg" src="assets/images/recursive-confabulation-studies.png" alt="Recursive Confabulation study visualization" loading="lazy" />
+            <picture>
+              <source media="(min-width: 801px)" srcset="assets/images/recursive-confabulation-studies-desktop.png" />
+              <img class="himg" src="assets/images/recursive-confabulation-studies.png" alt="Recursive Confabulation study visualization" loading="lazy" />
+            </picture>
             <div class="body">
               <strong>Recursive Confabulation</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Why Reasoning Prompts Backfire and Grounding Works (Sometimes)</p>
@@ -349,7 +355,10 @@
             </div>
           </div>
           <div class="highlight">
-            <img class="himg" src="assets/images/simulation-fallacy-studies.png" alt="Simulation Fallacy study visualization" loading="lazy" />
+            <picture>
+              <source media="(min-width: 801px)" srcset="assets/images/simulation-fallacy-studies-desktop.png" />
+              <img class="himg" src="assets/images/simulation-fallacy-studies.png" alt="Simulation Fallacy study visualization" loading="lazy" />
+            </picture>
             <div class="body">
               <strong>Simulation Fallacy</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access</p>
@@ -361,7 +370,10 @@
             </div>
           </div>
           <div class="highlight">
-            <img class="himg" src="assets/images/eec-studies.png" alt="Epistemic Entropy Collapse study visualization" loading="lazy" />
+            <picture>
+              <source media="(min-width: 801px)" srcset="assets/images/eec-studies-desktop.png" />
+              <img class="himg" src="assets/images/eec-studies.png" alt="Epistemic Entropy Collapse study visualization" loading="lazy" />
+            </picture>
             <div class="body">
               <strong>No Evidence for Epistemic Entropy Collapse</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">A Null Result in Mechanistic Interpretability</p>
