@@ -100,7 +100,7 @@
     .highlights.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
     .highlights.horizontal{display:flex;flex-direction:column;gap:24px}
     .highlights.horizontal .highlight{flex-direction:row;gap:40px;align-items:center}
-    .highlights.horizontal .highlight .himg{width:40%;max-width:420px;flex-shrink:0;aspect-ratio:1/1}
+    .highlights.horizontal .highlight .himg{width:45%;max-width:500px;flex-shrink:0;aspect-ratio:1/1}
     .highlights.horizontal .highlight .body{padding:0;text-align:left;flex:1}
     @media (max-width:800px){
       .highlights{grid-template-columns:1fr}
@@ -322,7 +322,7 @@
           <h2>Four empirical investigations into model reasoning.</h2>
           <p class="sub narrow">Each study pairs a runnable Colab with a public repo for reproducibility.</p>
         </div>
-        <div class="highlights cols-2" style="margin-top:60px">
+        <div class="highlights horizontal" style="margin-top:60px">
           <div class="highlight">
             <picture>
               <source media="(min-width: 801px)" srcset="assets/images/mirror-loop-studies-desktop.png" />
