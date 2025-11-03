@@ -96,7 +96,8 @@
     /* research highlights (image tiles) */
     .highlights{display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
     .highlights.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
-    @media (max-width:800px){ .highlights{grid-template-columns:1fr} .highlights.cols-3{grid-template-columns:1fr} }
+    .highlights.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+    @media (max-width:800px){ .highlights{grid-template-columns:1fr} .highlights.cols-3{grid-template-columns:1fr} .highlights.cols-2{grid-template-columns:1fr} }
     .highlight{background:transparent;border:none;border-radius:14px;overflow:hidden;padding:0;display:flex;flex-direction:column;gap:10px}
     .highlight .himg{width:100%;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block}
     .highlight .body{padding:.75rem 0;text-align:center}
@@ -304,7 +305,7 @@
           <h2>Four empirical investigations into model reasoning.</h2>
           <p class="sub narrow">Each study pairs a runnable Colab with a public repo for reproducibility.</p>
         </div>
-        <div class="highlights" style="margin-top:60px">
+        <div class="highlights cols-2" style="margin-top:60px">
           <div class="highlight">
             <img class="himg" src="assets/images/mirror-loop-studies.png" alt="Mirror Loop study visualization" loading="lazy" />
             <div class="body">
