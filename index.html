@@ -213,7 +213,7 @@
     @media (max-width:768px){ .form-grid-2{grid-template-columns:1fr} }
   </style>
 
-  <!-- Structured Data for Organization Logo -->
+  <!-- Structured Data for Organization and Founder -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -221,10 +221,30 @@
     "name": "Course Correct Labs",
     "url": "https://www.coursecorrectlabs.com",
     "logo": "https://course-correct-labs.github.io/course-correct-labs-site/assets/images/og-image.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Bentley DeVilling"
+    },
     "sameAs": [
       "https://github.com/Course-Correct-Labs"
     ],
-    "description": "Empirical studies on model reasoning, epistemic reliability, and interpretability. Home of the Mirror Loop and Recursive Confabulation papers."
+    "description": "Independent research institute focused on AI interpretability, epistemic reliability, and model alignment. Founded by Bentley DeVilling."
+  }
+  </script>
+
+  <!-- Structured Data for Founder -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bentley DeVilling",
+    "jobTitle": "Founder",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Course Correct Labs",
+      "url": "https://www.coursecorrectlabs.com"
+    },
+    "description": "Founder of Course Correct Labs, an independent research institute focused on AI interpretability, epistemic reliability, and model alignment."
   }
   </script>
 </head>
@@ -467,8 +487,8 @@
       <div class="container">
         <div class="section-center">
           <span class="eyebrow-orange">About</span>
-          <h2>Course Correct Labs is an independent research institute founded by Bentley DeVilling, focused on AI interpretability, epistemic reliability, and model alignment.</h2>
-          <p class="sub">We study how advanced language models reason, fabricate, and self-correct — revealing where understanding ends and simulation begins. Our work combines theoretical frameworks (The Polite Liar, Delegated Introspection, Observer-Time, Anchor–Interval Hypothesis) with empirical studies (Mirror Loop, Recursive Confabulation, Simulation Fallacy, Entropy Collapse Null).</p>
+          <h2>Course Correct Labs</h2>
+          <p class="sub">We are an independent research institute founded by Bentley DeVilling, focused on AI interpretability, epistemic reliability, and model alignment. We study how advanced language models reason, fabricate, and self-correct — revealing where understanding ends and simulation begins. Our work combines theoretical frameworks (The Polite Liar, Delegated Introspection, Observer-Time, Anchor–Interval Hypothesis) with empirical studies (Mirror Loop, Recursive Confabulation, Simulation Fallacy, Entropy Collapse Null).</p>
           <p class="sub">Each project contributes to an open evaluation suite for epistemic trust in frontier models. Our goal is simple: keep AI useful, honest, and on our side.</p>
         </div>
       </div>
