@@ -1,39 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://coursecorrectlabs.com/</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Section Pages -->
   <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/#research</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://coursecorrectlabs.com/research</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/studies</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/evaluations</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/partner-with-us</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/#evaluations</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://coursecorrectlabs.com/about</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/#papers</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://coursecorrectlabs.com/contact</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Paper Pages -->
+  <url>
+    <loc>https://coursecorrectlabs.com/papers/the-polite-liar</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/papers/delegated-introspection</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/papers/observer-time</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/papers/anchor-interval-hypothesis</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Study Pages -->
+  <url>
+    <loc>https://coursecorrectlabs.com/studies/mirror-loop</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/studies/recursive-confabulation</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coursecorrectlabs.com/studies/simulation-fallacy</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/#blog</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://course-correct-labs.github.io/course-correct-labs-site/#work</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://coursecorrectlabs.com/studies/entropy-collapse-null</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
