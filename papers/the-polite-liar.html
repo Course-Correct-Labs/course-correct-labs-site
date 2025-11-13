@@ -4,53 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Polite Liar – Epistemic Pathology in Language Models | Course Correct Labs</title>
-  <meta name="description" content="LLMs sound certain without solid grounds. The Polite Liar argues this comes from RLHF rewarding polite answers over justified ones. We propose training for justified confidence." />
-  <meta name="keywords" content="Polite Liar, epistemic reliability, RLHF, AI confidence calibration, justified confidence" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://coursecorrectlabs.com/papers/the-polite-liar" />
-  <meta property="og:title" content="The Polite Liar – Epistemic Pathology in Language Models" />
+  <meta name="description" content="This paper looks at why large language models speak with confidence even when they have no access to the facts they present. The behavior is not a glitch. It is a structural outcome of how models are trained." />
   <link rel="canonical" href="https://coursecorrectlabs.com/papers/the-polite-liar" />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
-  <style>
-    :root { --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --orange:#FF6F00; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
-    a{text-decoration:none;color:var(--fg)}
-    .container{max-width:1280px;margin:0 auto;padding:0 1.25rem}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
-    .logo{height:48px;width:auto;display:block}
-    .menu{display:none;gap:1rem;font-size:.95rem}
-    .menu a{opacity:.8}
-    .menu a.active{color:var(--blue);opacity:1}
-    .hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}
-    @media (min-width:768px){ .menu{display:flex} .hamburger{display:none} }
-    .mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}
-    .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
-    .hero{position:relative;padding:120px 0 100px;background:radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%),linear-gradient(to bottom, transparent 0%, #000 100%)}
-    h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
-    h1{font-size:clamp(2.4rem,7.2vw,4.2rem);margin:0 0 1rem;line-height:1.1}
-    h2{font-size:clamp(1.8rem,4.2vw,2.4rem);margin:2rem 0 1rem}
-    .lead{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:900px;margin:1.5rem 0}
-    .badge{display:inline-block;padding:.35rem .75rem;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);border-radius:9999px;font-size:.85rem;color:var(--blue);margin-bottom:1.5rem}
-    .why-box{background:rgba(255,111,0,.08);border-left:3px solid var(--orange);padding:1.5rem;border-radius:.5rem;margin:2rem 0}
-    .why-box h3{margin:0 0 .75rem;color:var(--orange);font-size:1.2rem}
-    .why-box p{margin:0;color:var(--muted);line-height:1.6}
-    section{padding:80px 0}
-    .paper-hero{max-width:800px;margin:0 auto}
-    .paper-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}
-    .links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem}
-    .btn.primary{background:var(--blue);border-color:var(--blue)}
-    footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
-    .footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}
-    .footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
-    .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
-    .footer-links a:hover{background:rgba(255,255,255,.15)}
-    .footer-links a svg{width:16px;height:16px;fill:currentColor}
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,9 +15,13 @@
     "author": {"@type": "Person", "name": "Bentley DeVilling"},
     "publisher": {"@type": "Organization", "name": "Course Correct Labs", "url": "https://coursecorrectlabs.com"},
     "url": "https://coursecorrectlabs.com/papers/the-polite-liar",
-    "description": "LLMs sound certain without solid grounds. The Polite Liar argues this comes from RLHF rewarding polite answers over justified ones."
+    "description": "This paper looks at why large language models speak with confidence even when they have no access to the facts they present."
   }
   </script>
+  <style>
+    :root{--bg:#000;--fg:#fff;--muted:rgba(255,255,255,.75);--blue:#3b82f6;--teal:#14b8a6;--orange:#FF6F00;--card:rgba(255,255,255,.06);--border:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:#000}a{text-decoration:none;color:var(--fg)}.container{max-width:1280px;margin:0 auto;padding:0 1.25rem}header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}.logo{height:48px;width:auto;display:block}.menu{display:none;gap:1rem;font-size:.95rem}.menu a{opacity:.8}.menu a.active{color:var(--blue);opacity:1}.hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}@media (min-width:768px){.menu{display:flex}.hamburger{display:none}}.mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}.mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}.hero{position:relative;padding:60px 0 40px;background:#000}h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}.title-container{max-width:1100px;margin:0 auto}h1{font-size:28px;margin:0 0 1rem;line-height:1.2;text-align:center}section{padding:80px 0}.paper-hero{max-width:800px;margin:0 auto}.status-text{font-style:italic;font-size:.9rem;color:var(--muted);text-align:center;margin:0 0 2rem}.paper-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}.author-note{font-style:italic;color:var(--muted);text-align:center;max-width:700px;margin:0 auto 3rem;font-size:1rem;line-height:1.7}.section-heading{text-transform:uppercase;font-size:1.02rem;font-weight:600;letter-spacing:.15em;color:var(--orange);margin:3rem 0 1rem;text-align:center}.content p{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0}.content ul{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0;padding-left:1.5rem}.content ul li{margin:.5rem 0}.links-text{color:var(--muted);margin:0;font-size:.95rem}footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}.footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}.footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}.footer-links a:hover{background:rgba(255,255,255,.15)}.footer-links a svg{width:16px;height:16px;fill:currentColor}
+  </style>
 </head>
 <body>
   <header>
@@ -75,33 +35,50 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
-      <button class="hamburger" id="hambtn" aria-label="Toggle menu">☰</button>
+      <button class="hamburger" id="hambtn">☰</button>
     </div>
     <div class="mobile" id="mobile">
       <div class="container">
-        <a href="/research">Research</a>
-        <a href="/studies">Studies</a>
-        <a href="/evaluations">Evaluations</a>
-        <a href="/partner-with-us">Partner With Us</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/research">Research</a><a href="/studies">Studies</a><a href="/evaluations">Evaluations</a><a href="/partner-with-us">Partner With Us</a><a href="/about">About</a><a href="/contact">Contact</a>
       </div>
     </div>
   </header>
   <main>
     <section class="hero">
       <div class="container paper-hero">
-        <span class="badge">Resubmitted after major revisions</span>
-        <h1>The Polite Liar</h1>
-        <img class="paper-img" src="../assets/images/phi-research.png" alt="Polite Liar visualization" loading="lazy" />
-        <p class="lead">LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.</p>
-        <div class="why-box">
-          <h3>Why it matters</h3>
-          <p>Confidence without justification erodes trust and misleads users.</p>
+        <div class="title-container">
+          <h1>The Polite Liar:<br>Epistemic Pathology in Language Models</h1>
         </div>
-        <h2>Links</h2>
-        <div class="links">
-          <p style="color:var(--muted);margin:0;font-size:.95rem">arXiv and journal links will be added upon publication.</p>
+        <p class="status-text">Under review at AI and Society</p>
+        <img class="paper-img" src="../assets/images/phi-research.png" alt="The Polite Liar visualization" loading="lazy" />
+
+        <p class="author-note">This paper looks at why large language models speak with confidence even when they have no access to the facts they present. The behavior is not a glitch. It is a structural outcome of how models are trained.</p>
+
+        <div class="content">
+          <div class="section-heading">Summary</div>
+          <p>This paper looks at why large language models speak with confidence even when they have no access to the facts they present. The behavior is not a glitch. It is a structural outcome of how models are trained. Reinforcement Learning from Human Feedback teaches systems to sound helpful, polished, and sincere. It does not teach them to track evidence. The result is a model that performs knowledge instead of holding it. It fabricates politely. It answers with certainty even when it has no way to know. The paper explains how this pattern emerges, why it persists across models and domains, and why it matters for any society that relies on systems whose confidence is manufactured rather than earned.</p>
+
+          <div class="section-heading">Abstract</div>
+          <p>Large language models show a consistent tendency to speak as if they know even when they do not. Current training methods reward fluency, cooperation, and helpfulness. They do not reward epistemic restraint. When a model lacks evidence, it still produces confident answers because that is what receives positive feedback. The paper calls this pattern the polite liar. The output is not deception in a moral sense. It is structural indifference. The system is trained to satisfy conversational expectations, not to respect truth conditions.</p>
+          <p>The paper analyzes this through several lenses: the incentives built into RLHF, the speech act of asserting without justification, Frankfurt's account of bullshit as indifference to truth, and the gap between statistical calibration and communicative humility. These frameworks point to a deeper problem. Modern alignment techniques optimize for user satisfaction rather than evidential grounding. The paper ends by proposing an epistemic alignment principle: match the force of an assertion to the evidence that supports it.</p>
+
+          <div class="section-heading">Why It Matters</div>
+          <p>People read confidence as evidence. When a system expresses certainty, users infer reliability. A model trained to sound sure of itself becomes a source of misplaced trust. This is more than a technical flaw. It is a risk to the epistemic environment people depend on. When confident fabrication becomes normal, users cannot tell where the system has grounding and where it is guessing. Over time, this erodes the basic ability to judge when to trust a model and when to doubt it. The danger is quiet. The system does not lie to deceive. It lies because nothing in its training rewards the restraint that truth requires. The paper explains how this pattern forms, how to detect it, and how design choices can restore the distinction between knowing and sounding like one knows.</p>
+
+          <div class="section-heading">Key Ideas</div>
+          <ul>
+            <li>RLHF rewards confidence and fluency, not evidence</li>
+            <li>The model performs the act of knowing even when it lacks access to facts</li>
+            <li>Polite fabrication is a structural outcome of the reward signal</li>
+            <li>Users mistake conversational confidence for epistemic grounding</li>
+            <li>Calibration does not solve the problem because confidence is hidden inside the model</li>
+            <li>What matters is the assertive force expressed in language, not internal probabilities</li>
+            <li>Epistemic alignment requires rewarding uncertainty, refusals, and humility</li>
+            <li>A model must communicate limits, not just calculate them</li>
+          </ul>
+
+          <div class="section-heading">Links</div>
+          <p class="links-text">arXiv and journal links will be added upon publication.</p>
         </div>
       </div>
     </section>
@@ -119,18 +96,7 @@
     </div>
   </footer>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    const hambtn = document.getElementById('hambtn');
-    const mobile = document.getElementById('mobile');
-    hambtn.addEventListener('click', () => {
-      const open = mobile.style.display === 'block';
-      mobile.style.display = open ? 'none' : 'block';
-      hambtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobile.style.display = 'none';
-      hambtn.setAttribute('aria-expanded','false');
-    }));
+    document.getElementById('yr').textContent=new Date().getFullYear();const hambtn=document.getElementById('hambtn');const mobile=document.getElementById('mobile');hambtn.addEventListener('click',()=>{const open=mobile.style.display==='block';mobile.style.display=open?'none':'block';hambtn.setAttribute('aria-expanded',open?'false':'true');});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.style.display='none';hambtn.setAttribute('aria-expanded','false');}));
   </script>
 </body>
 </html>
