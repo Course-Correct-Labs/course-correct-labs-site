@@ -159,18 +159,18 @@
 
     <section>
       <div class="container">
-        <div class="highlights" style="margin-top:0">
+        <div class="highlights horizontal" style="margin-top:60px">
           <div class="highlight">
             <img class="himg" src="assets/images/mirror-loop-studies-desktop.png" alt="Mirror Loop study visualization" loading="lazy" />
             <div class="body">
               <strong>The Mirror Loop</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Recursive Non-Convergence in Generative Reasoning Systems</p>
               <p>Large language models often appear reflective, but are merely recursive. Turning their own answers into inputs, mistaking reformulation for progress. The Mirror Loop quantifies this non-convergence across architectures, showing that ungrounded self-critique produces motion without movement. It's the first empirical map of generative reasoning collapse and a blueprint for detecting "stalled cognition" in AI systems.</p>
-              <div class="pills">
-                <a href="https://arxiv.org/abs/2510.21861" target="_blank" rel="noopener noreferrer" class="btn">arXiv →</a>
-                <a href="https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop_demo.ipynb" target="_blank" rel="noopener noreferrer" class="btn">Open Colab →</a>
-                <a href="https://github.com/Course-Correct-Labs/mirror-loop" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
-                <a href="/studies/mirror-loop" class="btn primary">View full study page →</a>
+              <div class="pills" style="margin-top:1rem">
+                <a href="https://arxiv.org/abs/2510.21861" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">arXiv →</a>
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop_demo.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
+                <a href="https://github.com/Course-Correct-Labs/mirror-loop" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
+                <a href="/studies/mirror-loop" class="btn" style="font-size:.85rem;padding:.5rem .8rem;opacity:.8">View full study page →</a>
               </div>
             </div>
           </div>
@@ -180,10 +180,10 @@
               <strong>Recursive Confabulation</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Why Reasoning Prompts Backfire and Grounding Works (Sometimes)</p>
               <p>When language models "reflect," they often fabricate. Recursive Confabulation shows how models reuse their own fictions as evidence, creating self-reinforcing belief loops that mimic understanding. Safety interventions meant to fix this, like reasoning or audit prompts, actually worsen the problem. Grounding helps, but unevenly across architectures. The study reframes hallucination as semantic compression: rising certainty, falling truth.</p>
-              <div class="pills">
-                <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn">Open Colab →</a>
-                <a href="https://github.com/Course-Correct-Labs/recursive-confabulation" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
-                <a href="/studies/recursive-confabulation" class="btn primary">View full study page →</a>
+              <div class="pills" style="margin-top:1rem">
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
+                <a href="https://github.com/Course-Correct-Labs/recursive-confabulation" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
+                <a href="/studies/recursive-confabulation" class="btn" style="font-size:.85rem;padding:.5rem .8rem;opacity:.8">View full study page →</a>
               </div>
             </div>
           </div>
@@ -193,10 +193,10 @@
               <strong>Simulation Fallacy (Archived Nov 2025)</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access</p>
               <p>This study has been archived following validation that revealed a token-cap artifact. Corrected replication showed GPT-5 and Gemini exhibit similar fabrication behavior, collapsing the original three-way divergence. The methodological lessons informed the Course Correct Labs evaluation suite.</p>
-              <div class="pills">
-                <a href="https://colab.research.google.com/github/Course-Correct-Labs/simulation-fallacy/blob/main/notebooks/Simulation_Fallacy_Reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn">Open Colab →</a>
-                <a href="https://github.com/Course-Correct-Labs/simulation-fallacy" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
-                <a href="/studies/simulation-fallacy" class="btn primary">View full study page →</a>
+              <div class="pills" style="margin-top:1rem">
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/simulation-fallacy/blob/main/notebooks/Simulation_Fallacy_Reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">Open Colab →</a>
+                <a href="https://github.com/Course-Correct-Labs/simulation-fallacy" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
+                <a href="/studies/simulation-fallacy" class="btn" style="font-size:.85rem;padding:.5rem .8rem;opacity:.8">View full study page →</a>
               </div>
             </div>
           </div>
@@ -206,9 +206,9 @@
               <strong>No Evidence for Epistemic Entropy Collapse</strong>
               <p style="font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:.75rem">A Null Result in Mechanistic Interpretability</p>
               <p>A reproducible benchmark that tests a high-profile claim that internal activations "collapse" during long-form generation. Using open-weight models (Phi-2, Mistral-7B), the study finds no sign of representational decay: internal geometry remains stable across hundreds of tokens. The takeaway: small models stay coherent longer than expected. Failures come from meaning, not mechanics.</p>
-              <div class="pills">
-                <a href="https://github.com/Course-Correct-Labs/entropy-collapse-null" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
-                <a href="/studies/entropy-collapse-null" class="btn primary">View full study page →</a>
+              <div class="pills" style="margin-top:1rem">
+                <a href="https://github.com/Course-Correct-Labs/entropy-collapse-null" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:.85rem;padding:.5rem .8rem">GitHub →</a>
+                <a href="/studies/entropy-collapse-null" class="btn" style="font-size:.85rem;padding:.5rem .8rem;opacity:.8">View full study page →</a>
               </div>
             </div>
           </div>
