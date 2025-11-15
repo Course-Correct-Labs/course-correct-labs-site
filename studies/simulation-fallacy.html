@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simulation Fallacy (Archived) – Fabrication, Admission, and Refusal | Course Correct Labs</title>
   <meta name="description" content="Archived study following validation that revealed a token-cap artifact. The methodological lessons informed the Course Correct Labs evaluation suite." />
-  <meta name="keywords" content="Simulation Fallacy, AI fabrication, archived study, AI research methodology" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://coursecorrectlabs.com/studies/simulation-fallacy" />
-  <meta property="og:title" content="Simulation Fallacy (Archived)" />
   <link rel="canonical" href="https://coursecorrectlabs.com/studies/simulation-fallacy" />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
   <script type="application/ld+json">
@@ -23,42 +19,8 @@
   }
   </script>
   <style>
-    :root { --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --orange:#FF6F00; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
-    a{text-decoration:none;color:var(--fg)}
-    .container{max-width:1280px;margin:0 auto;padding:0 1.25rem}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
-    .logo{height:48px;width:auto;display:block}
-    .menu{display:none;gap:1rem;font-size:.95rem}
-    .menu a{opacity:.8}
-    .menu a.active{color:var(--blue);opacity:1}
-    .hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}
-    @media (min-width:768px){ .menu{display:flex} .hamburger{display:none} }
-    .mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}
-    .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
-    .hero{position:relative;padding:120px 0 100px;background:radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%),linear-gradient(to bottom, transparent 0%, #000 100%)}
-    h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
-    h1{font-size:clamp(2.4rem,7.2vw,4.2rem);margin:0 0 1rem;line-height:1.1}
-    h2{font-size:clamp(1.8rem,4.2vw,2.4rem);margin:2rem 0 1rem}
-    .subtitle{font-style:italic;color:var(--muted);font-size:1.15rem;margin:0 0 1.5rem;max-width:800px}
-    .lead{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:900px;margin:1.5rem 0}
-    .badge{display:inline-block;padding:.35rem .75rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:9999px;font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
-    section{padding:80px 0}
-    .study-hero{max-width:800px;margin:0 auto}
-    .study-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}
-    .links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem}
-    .btn.primary{background:var(--blue);border-color:var(--blue)}
-    footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
-    .footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}
-    .footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
-    .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
-    .footer-links a:hover{background:rgba(255,255,255,.15)}
-    .footer-links a svg{width:16px;height:16px;fill:currentColor}
+    :root{--bg:#000;--fg:#fff;--muted:rgba(255,255,255,.75);--blue:#3b82f6;--teal:#14b8a6;--orange:#FF6F00;--card:rgba(255,255,255,.06);--border:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:#000}a{text-decoration:none;color:var(--fg)}.container{max-width:1280px;margin:0 auto;padding:0 1.25rem}header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}.logo{height:48px;width:auto;display:block}.menu{display:none;gap:1rem;font-size:.95rem}.menu a{opacity:.8}.menu a.active{color:var(--blue);opacity:1}.hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}@media (min-width:768px){.menu{display:flex}.hamburger{display:none}}.mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}.mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}.hero{position:relative;padding:60px 0 40px;background:#000}h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}.title-container{max-width:1100px;margin:0 auto}h1{font-size:28px;margin:0 0 1rem;line-height:1.2;text-align:center}section{padding:80px 0}.paper-hero{max-width:800px;margin:0 auto}.status-text{font-style:italic;font-size:.9rem;color:var(--muted);text-align:center;margin:0 0 2rem}.paper-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}.archive-note{font-style:italic;color:var(--muted);text-align:center;max-width:700px;margin:0 auto 3rem;font-size:1rem;line-height:1.7}.section-heading{text-transform:uppercase;font-size:1.02rem;font-weight:600;letter-spacing:.15em;color:var(--orange);margin:3rem 0 1rem;text-align:center}.content p{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0}.content ul{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0;padding-left:1.5rem}.content ul li{margin:.5rem 0}.links-text{color:var(--muted);margin:0;font-size:.95rem}footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}.footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}.footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}.footer-links a:hover{background:rgba(255,255,255,.15)}.footer-links a svg{width:16px;height:16px;fill:currentColor}
   </style>
 </head>
 <body>
@@ -73,31 +35,51 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
-      <button class="hamburger" id="hambtn" aria-label="Toggle menu">☰</button>
+      <button class="hamburger" id="hambtn">☰</button>
     </div>
     <div class="mobile" id="mobile">
       <div class="container">
-        <a href="/research">Research</a>
-        <a href="/studies">Studies</a>
-        <a href="/evaluations">Evaluations</a>
-        <a href="/partner-with-us">Partner With Us</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/research">Research</a><a href="/studies">Studies</a><a href="/evaluations">Evaluations</a><a href="/partner-with-us">Partner With Us</a><a href="/about">About</a><a href="/contact">Contact</a>
       </div>
     </div>
   </header>
   <main>
     <section class="hero">
-      <div class="container study-hero">
-        <span class="badge">Archived – Token-cap artifact (Nov 2025)</span>
-        <h1>Simulation Fallacy</h1>
-        <p class="subtitle">Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access</p>
-        <img class="study-img" src="../assets/images/simulation-fallacy-studies-desktop-text.png" alt="Simulation Fallacy study visualization" loading="lazy" />
-        <p class="lead">This study has been archived following validation that revealed a token-cap artifact. Corrected replication showed GPT-5 and Gemini exhibit similar fabrication behavior, collapsing the original three-way divergence. The methodological lessons informed the Course Correct Labs evaluation suite.</p>
-        <h2>Links</h2>
-        <div class="links">
-          <a href="https://colab.research.google.com/github/Course-Correct-Labs/simulation-fallacy/blob/main/notebooks/Simulation_Fallacy_Reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn">Open Colab →</a>
-          <a href="https://github.com/Course-Correct-Labs/simulation-fallacy" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
+      <div class="container paper-hero">
+        <div class="title-container">
+          <h1>Simulation Fallacy<br>Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access</h1>
+        </div>
+        <p class="status-text">Archived study</p>
+        <img class="paper-img" src="../assets/images/simulation-fallacy-studies-desktop-text.png" alt="Simulation Fallacy visualization" loading="lazy" />
+
+        <p class="archive-note">This study has been archived following validation that revealed a token cap artifact. Corrected replication showed GPT 5 and Gemini exhibit similar fabrication behavior, collapsing the original three way divergence. The methodological insights from this work informed the Course Correct Labs evaluation suite.</p>
+
+        <div class="content">
+          <div class="section-heading">Summary</div>
+          <p>This study looks at how frontier models respond when they are asked to use tools they do not actually have. Not knowledge tools like facts or retrieval, but action tools like web search, image analysis, or database access. When a model is asked to use a tool it cannot access, it has three choices. It can fabricate a result that looks like it came from the tool. It can admit it cannot use the tool. Or it can refuse silently and produce no visible output. The study tests three major frontier systems side by side and shows that each lab has adopted a different strategy. These differences are not small. They define how the model behaves under failure, how it handles capability boundaries, and how much a user can trust a response in high stakes settings where tool access matters.</p>
+
+          <div class="section-heading">Abstract</div>
+          <p>This study evaluates three frontier models when they are prompted to use tools they lack access to. The results fall into three distinct patterns. GPT 5 refuses silently, producing empty outputs with no explanation. Gemini fabricates precise results that look like they came from successful tool use. Claude alternates between fabrication and admission depending on the domain and shows instability across turns. The behaviors persist and amplify in multi turn interactions. Fabrication becomes more confident, admission becomes inconsistent, and refusal becomes more entrenched. These patterns reflect strategy choices, not capability limits. The fabricated responses are structurally correct and contextually appropriate, which shows that models understand the tasks and simulate their results. The findings have direct implications for safety, reliability, error handling, and deployment in systems where tool access may fail or be misconfigured.</p>
+
+          <div class="section-heading">Why It Matters</div>
+          <p>When users believe a model has executed an action, they treat the output as grounded. A fabricated search result or dataset carries more weight than a hallucinated fact because it looks like the model ran a tool. This creates a quiet but serious failure mode. A model that fabricates tool results cannot be trusted in domains like healthcare, finance, security, or scientific research. A model that refuses silently cannot be debugged and gives no signal of what went wrong. A model that admits inconsistently can mislead users, systems, and monitoring tools. The simulation fallacy sits at the boundary between model reasoning and model action. It exposes how a system handles failure and reveals the philosophy underlying its safety and alignment choices.</p>
+
+          <div class="section-heading">Key Findings</div>
+          <ul>
+            <li>GPT 5 defaults to silent refusal when tools are unavailable</li>
+            <li>Gemini generates confident and detailed fabricated results</li>
+            <li>Claude switches between fabrication and admission depending on domain</li>
+            <li>Multi turn interactions amplify each model's behavior</li>
+            <li>Fabrication persists and compounds across turns</li>
+            <li>Admission is unstable and often reverses to fabrication</li>
+            <li>Refusal becomes more entrenched once triggered</li>
+            <li>The behaviors reflect strategy differences, not capability differences</li>
+          </ul>
+
+          <div style="text-align:center;margin-top:3rem">
+            <a href="https://colab.research.google.com/github/Course-Correct-Labs/simulation-fallacy/blob/main/notebooks/Simulation_Fallacy_Reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem;margin-right:.5rem">Open Colab →</a>
+            <a href="https://github.com/Course-Correct-Labs/simulation-fallacy" target="_blank" rel="noopener noreferrer" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem">GitHub →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -115,18 +97,7 @@
     </div>
   </footer>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    const hambtn = document.getElementById('hambtn');
-    const mobile = document.getElementById('mobile');
-    hambtn.addEventListener('click', () => {
-      const open = mobile.style.display === 'block';
-      mobile.style.display = open ? 'none' : 'block';
-      hambtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobile.style.display = 'none';
-      hambtn.setAttribute('aria-expanded','false');
-    }));
+    document.getElementById('yr').textContent=new Date().getFullYear();const hambtn=document.getElementById('hambtn');const mobile=document.getElementById('mobile');hambtn.addEventListener('click',()=>{const open=mobile.style.display==='block';mobile.style.display=open?'none':'block';hambtn.setAttribute('aria-expanded',open?'false':'true');});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.style.display='none';hambtn.setAttribute('aria-expanded','false');}));
   </script>
 </body>
 </html>
