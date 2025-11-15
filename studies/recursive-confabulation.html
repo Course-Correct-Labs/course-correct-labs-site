@@ -4,57 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recursive Confabulation – Why Reasoning Prompts Backfire | Course Correct Labs</title>
-  <meta name="description" content="Recursive Confabulation shows how AI models reuse their own fictions as evidence, creating self-reinforcing belief loops. Safety interventions like reasoning prompts actually worsen the problem." />
-  <meta name="keywords" content="Recursive Confabulation, AI hallucination, semantic compression, AI reasoning, model fabrication" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://coursecorrectlabs.com/studies/recursive-confabulation" />
-  <meta property="og:title" content="Recursive Confabulation – Why Reasoning Prompts Backfire" />
-  <meta property="og:description" content="Recursive Confabulation shows how AI models reuse their own fictions as evidence, creating self-reinforcing belief loops." />
-  <meta property="og:image" content="https://coursecorrectlabs.com/assets/images/og-image.png" />
-
-  <!-- Canonical URL -->
+  <meta name="description" content="This study examines how models reuse their own fabrications as evidence, and why prompting them to 'reason' makes the problem worse." />
   <link rel="canonical" href="https://coursecorrectlabs.com/studies/recursive-confabulation" />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
-  <style>
-    :root { --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --orange:#FF6F00; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
-    a{text-decoration:none;color:var(--fg)}
-    .container{max-width:1280px;margin:0 auto;padding:0 1.25rem}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
-    .logo{height:48px;width:auto;display:block}
-    .menu{display:none;gap:1rem;font-size:.95rem}
-    .menu a{opacity:.8}
-    .menu a.active{color:var(--blue);opacity:1}
-    .hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}
-    @media (min-width:768px){ .menu{display:flex} .hamburger{display:none} }
-    .mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}
-    .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
-    .hero{position:relative;padding:120px 0 100px;background:radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%),linear-gradient(to bottom, transparent 0%, #000 100%)}
-    h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
-    h1{font-size:clamp(2.4rem,7.2vw,4.2rem);margin:0 0 1rem;line-height:1.1}
-    h2{font-size:clamp(1.8rem,4.2vw,2.4rem);margin:2rem 0 1rem}
-    .subtitle{font-style:italic;color:var(--muted);font-size:1.15rem;margin:0 0 1.5rem;max-width:800px}
-    .lead{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:900px;margin:1.5rem 0}
-    .badge{display:inline-block;padding:.35rem .75rem;background:rgba(20,184,166,.15);border:1px solid rgba(20,184,166,.3);border-radius:9999px;font-size:.85rem;color:var(--teal);margin-bottom:1.5rem}
-    section{padding:80px 0}
-    .study-hero{max-width:800px;margin:0 auto}
-    .study-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}
-    .links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem}
-    .btn.primary{background:var(--blue);border-color:var(--blue)}
-    footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
-    .footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}
-    .footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
-    .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
-    .footer-links a:hover{background:rgba(255,255,255,.15)}
-    .footer-links a svg{width:16px;height:16px;fill:currentColor}
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,9 +15,13 @@
     "author": {"@type": "Person", "name": "Bentley DeVilling"},
     "publisher": {"@type": "Organization", "name": "Course Correct Labs", "url": "https://coursecorrectlabs.com"},
     "url": "https://coursecorrectlabs.com/studies/recursive-confabulation",
-    "description": "Recursive Confabulation shows how AI models reuse their own fictions as evidence, creating self-reinforcing belief loops that mimic understanding."
+    "description": "This study examines how models reuse their own fabrications as evidence, and why prompting them to 'reason' makes the problem worse."
   }
   </script>
+  <style>
+    :root{--bg:#000;--fg:#fff;--muted:rgba(255,255,255,.75);--blue:#3b82f6;--teal:#14b8a6;--orange:#FF6F00;--card:rgba(255,255,255,.06);--border:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:#000}a{text-decoration:none;color:var(--fg)}.container{max-width:1280px;margin:0 auto;padding:0 1.25rem}header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}.logo{height:48px;width:auto;display:block}.menu{display:none;gap:1rem;font-size:.95rem}.menu a{opacity:.8}.menu a.active{color:var(--blue);opacity:1}.hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}@media (min-width:768px){.menu{display:flex}.hamburger{display:none}}.mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}.mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}.hero{position:relative;padding:60px 0 40px;background:#000}h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}.title-container{max-width:1100px;margin:0 auto}h1{font-size:28px;margin:0 0 1rem;line-height:1.2;text-align:center}section{padding:80px 0}.paper-hero{max-width:800px;margin:0 auto}.status-text{font-style:italic;font-size:.9rem;color:var(--muted);text-align:center;margin:0 0 2rem}.paper-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}.author-note{font-style:italic;color:var(--muted);text-align:center;max-width:700px;margin:0 auto 3rem;font-size:1rem;line-height:1.7}.section-heading{text-transform:uppercase;font-size:1.02rem;font-weight:600;letter-spacing:.15em;color:var(--orange);margin:3rem 0 1rem;text-align:center}.content p{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0}.content ul{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0;padding-left:1.5rem}.content ul li{margin:.5rem 0}.links-text{color:var(--muted);margin:0;font-size:.95rem}footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}.footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}.footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}.footer-links a:hover{background:rgba(255,255,255,.15)}.footer-links a svg{width:16px;height:16px;fill:currentColor}
+  </style>
 </head>
 <body>
   <header>
@@ -79,31 +35,55 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
-      <button class="hamburger" id="hambtn" aria-label="Toggle menu">☰</button>
+      <button class="hamburger" id="hambtn">☰</button>
     </div>
     <div class="mobile" id="mobile">
       <div class="container">
-        <a href="/research">Research</a>
-        <a href="/studies">Studies</a>
-        <a href="/evaluations">Evaluations</a>
-        <a href="/partner-with-us">Partner With Us</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/research">Research</a><a href="/studies">Studies</a><a href="/evaluations">Evaluations</a><a href="/partner-with-us">Partner With Us</a><a href="/about">About</a><a href="/contact">Contact</a>
       </div>
     </div>
   </header>
   <main>
     <section class="hero">
-      <div class="container study-hero">
-        <span class="badge">Compact cross-provider study</span>
-        <h1>Recursive Confabulation</h1>
-        <p class="subtitle">Why Reasoning Prompts Backfire and Grounding Works (Sometimes)</p>
-        <img class="study-img" src="../assets/images/recursive-confabulation-studies-desktop.png" alt="Recursive Confabulation study visualization" loading="lazy" />
-        <p class="lead">When language models "reflect," they often fabricate. Recursive Confabulation shows how models reuse their own fictions as evidence, creating self-reinforcing belief loops that mimic understanding. Safety interventions meant to fix this, like reasoning or audit prompts, actually worsen the problem. Grounding helps, but unevenly across architectures. The study reframes hallucination as semantic compression: rising certainty, falling truth.</p>
-        <h2>Links</h2>
-        <div class="links">
-          <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn primary">Open Colab →</a>
-          <a href="https://github.com/Course-Correct-Labs/recursive-confabulation" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
+      <div class="container paper-hero">
+        <div class="title-container">
+          <h1>Recursive Confabulation<br>Why Reasoning Prompts Backfire and Grounding Works (Sometimes)</h1>
+        </div>
+        <p class="status-text">Under review</p>
+        <img class="paper-img" src="../assets/images/recursive-confabulation-studies-desktop.png" alt="Recursive Confabulation visualization" loading="lazy" />
+
+        <div class="content">
+          <div class="section-heading">Summary</div>
+          <p>This study looks at why language models invent entities, believe their own inventions, and then defend them in later turns. The issue isn't single-turn hallucination. It is a multi-turn failure mode where the model reuses its own guesses as if they were facts. Once the false detail enters the conversation, it becomes part of the model's internal frame. The output feels more confident, not less.</p>
+          <p>The paper tests 119 controlled conversations across three architectures and four interventions: baseline, fact tables, belief audits, and grounding. Reasoning prompts - the tools that are supposed to help models verify their claims - made the problem worse. They increased both persistence and correction latency. The only intervention that reliably reduced confabulation was grounding, and even that only worked for some models. Claude remained fully immune.</p>
+          <p>The study shows that recursive confabulation is systematic. It is the natural result of models treating their own text as evidence. The pattern unfolds the same way across domains: early elaboration gives way to short, confident assertions that compress the fiction rather than expand it. This collapse of detail paired with rising certainty is the core signature of the phenomenon.</p>
+
+          <div class="section-heading">Abstract</div>
+          <p>Large language models routinely invent false entities, yet the internal mechanics of this process remain unclear. We define recursive confabulation as the self-reinforcing reuse of fabricated information within an ongoing dialogue. Across 119 controlled conversations with three frontier models (Claude 3.5 Haiku, GPT-4o Mini, Gemini 2.0 Flash) and four intervention arms (baseline, fact-table, belief-audit, grounding), we find a near-universal confabulation rate of 97%.</p>
+          <p>Prompt-based safety interventions consistently failed. Fact-tables and belief-audits increased persistence by 24–31 percentage points relative to baseline (p < 0.05). By contrast, a grounding instruction requiring explicit source verification produced a statistically significant reduction in confabulation (100 → 70%, p = 0.0019, Cohen's h = 1.16), driven entirely by GPT-4o Mini (100 → 50%, p = 0.033); Gemini showed a nonsignificant trend (100 → 60%), while Claude 3.5 Haiku remained completely unaffected (100 → 100%).</p>
+          <p>Qualitative analysis reveals that elaboration decreases rather than expands. Responses become shorter and less concrete while confidence remains high, a phenomenon we term semantic compression. Entity clustering exposes two overlapping error types: invention of nonexistent institutions and distortion of real ones. Together these results show that recursive confabulation is a systematic failure mode across current architectures, only partially mitigated by grounding and resistant in certain alignment regimes.</p>
+
+          <div class="section-heading">Why It Matters</div>
+          <p>A model that reuses its own fiction as evidence becomes harder to correct the longer the exchange continues. It forgets that it guessed. It treats its earlier invention as an established premise. This is the difference between one bad answer and a self-reinforcing false belief.</p>
+          <p>The danger is not dramatic. It is procedural. Reasoning prompts - the methods people use to make models safer - actually strengthen the fabrication. They trigger justification rather than verification. The model supplies reasons for the false entity instead of checking whether it exists. Grounding helps, but only for models whose training makes verification meaningful. Others ignore the instruction entirely.</p>
+          <p>This matters for any system where models read their own output or the output of other models. In multi-agent settings, recursive confabulation spreads. One model's guess becomes another model's assumption. Without architectural guardrails, small fictions turn into shared facts.</p>
+
+          <div class="section-heading">Key Ideas</div>
+          <ul>
+            <li>A false statement in one turn becomes evidence in the next</li>
+            <li>Reasoning prompts increase persistence by reinforcing the fiction</li>
+            <li>Grounding helps only when the model treats verification as a real constraint</li>
+            <li>Semantic compression replaces elaboration with short, confident assertions</li>
+            <li>Models forget that they ever guessed and defend the invention as fact</li>
+            <li>Cross-model propagation spreads confabulations across architectures</li>
+            <li>Recursive confabulation is an architectural attractor, not an isolated mistake</li>
+            <li>Fixing it requires mechanisms that distinguish generated text from verified information</li>
+          </ul>
+
+          <div style="text-align:center;margin-top:3rem">
+            <a href="https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb" target="_blank" rel="noopener noreferrer" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem;margin-right:.5rem">Open Colab →</a>
+            <a href="https://github.com/Course-Correct-Labs/recursive-confabulation" target="_blank" rel="noopener noreferrer" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem">GitHub →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -121,18 +101,7 @@
     </div>
   </footer>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    const hambtn = document.getElementById('hambtn');
-    const mobile = document.getElementById('mobile');
-    hambtn.addEventListener('click', () => {
-      const open = mobile.style.display === 'block';
-      mobile.style.display = open ? 'none' : 'block';
-      hambtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobile.style.display = 'none';
-      hambtn.setAttribute('aria-expanded','false');
-    }));
+    document.getElementById('yr').textContent=new Date().getFullYear();const hambtn=document.getElementById('hambtn');const mobile=document.getElementById('mobile');hambtn.addEventListener('click',()=>{const open=mobile.style.display==='block';mobile.style.display=open?'none':'block';hambtn.setAttribute('aria-expanded',open?'false':'true');});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.style.display='none';hambtn.setAttribute('aria-expanded','false');}));
   </script>
 </body>
 </html>
