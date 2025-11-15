@@ -4,62 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>No Evidence for Epistemic Entropy Collapse – A Null Result | Course Correct Labs</title>
-  <meta name="description" content="A reproducible benchmark that finds no sign of representational decay in small open-weight models. Internal geometry remains stable across hundreds of tokens." />
-  <meta name="keywords" content="entropy collapse, mechanistic interpretability, null result, AI benchmarking, model stability" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://coursecorrectlabs.com/studies/entropy-collapse-null" />
-  <meta property="og:title" content="No Evidence for Epistemic Entropy Collapse" />
+  <meta name="description" content="This study tested whether internal activation entropy declines during long-form generation in small open models. The result is a stable null." />
   <link rel="canonical" href="https://coursecorrectlabs.com/studies/entropy-collapse-null" />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
-  <style>
-    :root { --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.75); --blue:#3b82f6; --teal:#14b8a6; --orange:#FF6F00; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
-    a{text-decoration:none;color:var(--fg)}
-    .container{max-width:1280px;margin:0 auto;padding:0 1.25rem}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}
-    .logo{height:48px;width:auto;display:block}
-    .menu{display:none;gap:1rem;font-size:.95rem}
-    .menu a{opacity:.8}
-    .menu a.active{color:var(--blue);opacity:1}
-    .hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}
-    @media (min-width:768px){ .menu{display:flex} .hamburger{display:none} }
-    .mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}
-    .mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}
-    .hero{position:relative;padding:120px 0 100px;background:radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,.25), transparent 60%),radial-gradient(800px 400px at 80% 10%, rgba(20,184,166,.20), transparent 60%),radial-gradient(800px 400px at 20% 10%, rgba(236,72,153,.18), transparent 60%),linear-gradient(to bottom, transparent 0%, #000 100%)}
-    h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}
-    h1{font-size:clamp(2.4rem,7.2vw,4.2rem);margin:0 0 1rem;line-height:1.1}
-    h2{font-size:clamp(1.8rem,4.2vw,2.4rem);margin:2rem 0 1rem}
-    .subtitle{font-style:italic;color:var(--muted);font-size:1.15rem;margin:0 0 1.5rem;max-width:800px}
-    .lead{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:900px;margin:1.5rem 0}
-    .badge{display:inline-block;padding:.35rem .75rem;background:rgba(255,111,0,.15);border:1px solid rgba(255,111,0,.3);border-radius:9999px;font-size:.85rem;color:var(--orange);margin-bottom:1.5rem}
-    section{padding:80px 0}
-    .study-hero{max-width:800px;margin:0 auto}
-    .study-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}
-    .links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem}
-    .btn.primary{background:var(--blue);border-color:var(--blue)}
-    footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}
-    .footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}
-    .footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
-    .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
-    .footer-links a:hover{background:rgba(255,255,255,.15)}
-    .footer-links a svg{width:16px;height:16px;fill:currentColor}
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "No Evidence for Epistemic Entropy Collapse: A Null Result in Mechanistic Interpretability",
+    "headline": "No Evidence for Epistemic Entropy Collapse in Small Open Language Models",
     "author": {"@type": "Person", "name": "Bentley DeVilling"},
     "publisher": {"@type": "Organization", "name": "Course Correct Labs", "url": "https://coursecorrectlabs.com"},
     "url": "https://coursecorrectlabs.com/studies/entropy-collapse-null",
-    "description": "A reproducible benchmark that finds no sign of representational decay in small open-weight models."
+    "description": "This study tested whether internal activation entropy declines during long-form generation in small open models. The result is a stable null."
   }
   </script>
+  <style>
+    :root{--bg:#000;--fg:#fff;--muted:rgba(255,255,255,.75);--blue:#3b82f6;--teal:#14b8a6;--orange:#FF6F00;--card:rgba(255,255,255,.06);--border:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:#000}a{text-decoration:none;color:var(--fg)}.container{max-width:1280px;margin:0 auto;padding:0 1.25rem}header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(0,0,0,.45)}.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.65rem;font-weight:600;letter-spacing:.2px}.logo{height:48px;width:auto;display:block}.menu{display:none;gap:1rem;font-size:.95rem}.menu a{opacity:.8}.menu a.active{color:var(--blue);opacity:1}.hamburger{display:inline-flex;background:transparent;border:0;color:var(--fg);padding:.5rem;border-radius:.5rem}@media (min-width:768px){.menu{display:flex}.hamburger{display:none}}.mobile{display:none;border-top:1px solid var(--border);background:rgba(0,0,0,.7)}.mobile a{display:block;padding:.75rem 1rem;border-bottom:1px solid var(--border);opacity:.85}.hero{position:relative;padding:60px 0 40px;background:#000}h1,h2,h3{font-family:'Avenir Next',-apple-system,system-ui,sans-serif}.title-container{max-width:1100px;margin:0 auto}h1{font-size:28px;margin:0 0 1rem;line-height:1.2;text-align:center}section{padding:80px 0}.paper-hero{max-width:800px;margin:0 auto}.status-text{font-style:italic;font-size:.9rem;color:var(--muted);text-align:center;margin:0 0 2rem}.paper-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin:2rem auto}.archive-note{font-style:italic;color:var(--muted);text-align:center;max-width:700px;margin:0 auto 3rem;font-size:1rem;line-height:1.7}.section-heading{text-transform:uppercase;font-size:1.02rem;font-weight:600;letter-spacing:.15em;color:var(--orange);margin:3rem 0 1rem;text-align:center}.content p{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0}.content ul{color:var(--muted);font-size:1rem;line-height:1.7;margin:1rem 0;padding-left:1.5rem}.content ul li{margin:.5rem 0}.links-text{color:var(--muted);margin:0;font-size:.95rem}footer{padding:48px 0;color:var(--muted);font-size:.95rem;text-align:center;background:#000}.footer-logo{height:64px;width:auto;margin:0 auto 24px;display:block;opacity:.8}.footer-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}.footer-links a:hover{background:rgba(255,255,255,.15)}.footer-links a svg{width:16px;height:16px;fill:currentColor}
+  </style>
 </head>
 <body>
   <header>
@@ -73,30 +35,54 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
-      <button class="hamburger" id="hambtn" aria-label="Toggle menu">☰</button>
+      <button class="hamburger" id="hambtn">☰</button>
     </div>
     <div class="mobile" id="mobile">
       <div class="container">
-        <a href="/research">Research</a>
-        <a href="/studies">Studies</a>
-        <a href="/evaluations">Evaluations</a>
-        <a href="/partner-with-us">Partner With Us</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/research">Research</a><a href="/studies">Studies</a><a href="/evaluations">Evaluations</a><a href="/partner-with-us">Partner With Us</a><a href="/about">About</a><a href="/contact">Contact</a>
       </div>
     </div>
   </header>
   <main>
     <section class="hero">
-      <div class="container study-hero">
-        <span class="badge">Null result benchmark</span>
-        <h1>No Evidence for Epistemic Entropy Collapse</h1>
-        <p class="subtitle">A Null Result in Mechanistic Interpretability</p>
-        <img class="study-img" src="../assets/images/eec-studies-desktop.png" alt="Epistemic Entropy Collapse study visualization" loading="lazy" />
-        <p class="lead">A reproducible benchmark that tests a high-profile claim that internal activations "collapse" during long-form generation. Using open-weight models (Phi-2, Mistral-7B), the study finds no sign of representational decay: internal geometry remains stable across hundreds of tokens. The takeaway: small models stay coherent longer than expected. Failures come from meaning, not mechanics.</p>
-        <h2>Links</h2>
-        <div class="links">
-          <a href="https://github.com/Course-Correct-Labs/entropy-collapse-null" target="_blank" rel="noopener noreferrer" class="btn primary">GitHub →</a>
+      <div class="container paper-hero">
+        <div class="title-container">
+          <h1>No Evidence for Epistemic Entropy Collapse in Small Open Language Models</h1>
+        </div>
+        <p class="status-text">Archived null finding</p>
+        <img class="paper-img" src="../assets/images/eec-studies-desktop.png" alt="Epistemic Entropy Collapse visualization" loading="lazy" />
+
+        <p class="archive-note">This study tested whether internal activation entropy declines during long-form generation in small open models. The result is a stable null: no reliable collapse signal, no predictive relationship between early-window entropy and end-of-sequence failure, and no coupling between internal metrics and semantic drift.</p>
+
+        <div class="content">
+          <div class="section-heading">Summary</div>
+          <p>This study tests a specific claim: that internal activation entropy in language models declines during long-form generation, causing hidden states to compress into a lower-dimensional space. If the hypothesis were true, internal structure would shrink as the model generates text, and early signs of collapse would forecast failures later in the sequence.</p>
+          <p>The experiment analyzes two open models, Phi-2 and Mistral-7B, across 346 long outputs. For each generation, the study extracts hidden states at the final transformer layer, computes effective rank, participation ratio, and activation variance over sliding windows, and aligns those metrics with external measures like semantic drift, trigram novelty, and QA success.</p>
+          <p>The result is a clean null. Internal dimensionality stays flat. Only about ten percent of sequences show even mild negative slopes, and those are symmetric with positive slopes. Early entropy does not predict failure. There is no correlation between internal dynamics and external drift. The study establishes that, for small open models producing about eight hundred tokens, internal activation structure remains stable under normal conditions.</p>
+          <p>The result does not prove collapse is impossible. It sets a boundary. If collapse arises, it is likely scale specific, length specific, or prompt specific. The study provides a reproducible pipeline for testing those regimes and a benchmark null for future claims.</p>
+
+          <div class="section-heading">Abstract</div>
+          <p>We tested whether internal activation entropy systematically declines during long-form generation in open-weight language models, a proposed signature of epistemic entropy collapse. Using a reproducible mechanistic pipeline, we measured variance, effective rank, and participation ratio of hidden states in Phi-2 and Mistral-7B across 346 prompts producing eight hundred token outputs. We found no consistent decline in internal metrics and no predictive relationship between early-window entropy and end-of-sequence failure (ROC AUC about 0.46). Mean ECI was essentially zero with only about ten percent of prompts showing small negative values. The relationship between entropy decline and semantic drift was near zero at both sequence and window scales. These null results indicate that, for small open transformers and typical generation lengths, internal representations remain dynamically stable. We release the code and outputs as a reproducible null benchmark for long-context activation dynamics and as a calibration point for future claims about collapse at larger scales or under specialized prompting. Total compute cost was about eighteen dollars on consumer hardware.</p>
+
+          <div class="section-heading">Why It Matters</div>
+          <p>Claims about entropy collapse come with strong implications. If internal representations compress by default, long-form reasoning would be fundamentally unstable. Systems would require constant grounding, and failures would accumulate as sequences grow. If collapse does not happen under normal settings, researchers can focus on other causes of drift and error.</p>
+          <p>This study shows that collapse is not a default behavior in small open models. Internal geometry stays steady. Failures arise, but not because the hidden space is compressing. This clarifies where collapse is not happening and narrows the range of conditions where it might. It also demonstrates that mechanistic interpretability can be executed at low cost and provides a blueprint for scaling the experiment to larger models, longer contexts, and recursive prompting regimes.</p>
+
+          <div class="section-heading">Key Findings</div>
+          <ul>
+            <li>No systematic decline in effective rank, participation ratio, or variance</li>
+            <li>About ten percent of sequences show small negative slopes, symmetric with positive slopes</li>
+            <li>Early window entropy does not predict end-of-sequence failures</li>
+            <li>Correlation between entropy dynamics and semantic drift is near zero</li>
+            <li>Internal dimensionality stays stable across eight hundred token outputs</li>
+            <li>Failures are not caused by collapsing internal geometry</li>
+            <li>Null result bounds the space where collapse claims should be tested next</li>
+            <li>The pipeline runs on consumer hardware and is fully reproducible</li>
+          </ul>
+
+          <div style="text-align:center;margin-top:3rem">
+            <a href="https://github.com/Course-Correct-Labs/entropy-collapse-null" target="_blank" rel="noopener noreferrer" class="btn" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:#111318;color:var(--fg);font-size:.9rem">GitHub →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -114,18 +100,7 @@
     </div>
   </footer>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    const hambtn = document.getElementById('hambtn');
-    const mobile = document.getElementById('mobile');
-    hambtn.addEventListener('click', () => {
-      const open = mobile.style.display === 'block';
-      mobile.style.display = open ? 'none' : 'block';
-      hambtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobile.style.display = 'none';
-      hambtn.setAttribute('aria-expanded','false');
-    }));
+    document.getElementById('yr').textContent=new Date().getFullYear();const hambtn=document.getElementById('hambtn');const mobile=document.getElementById('mobile');hambtn.addEventListener('click',()=>{const open=mobile.style.display==='block';mobile.style.display=open?'none':'block';hambtn.setAttribute('aria-expanded',open?'false':'true');});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.style.display='none';hambtn.setAttribute('aria-expanded','false');}));
   </script>
 </body>
 </html>
