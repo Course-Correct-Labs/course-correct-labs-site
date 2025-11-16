@@ -146,8 +146,8 @@
     {
       "id": "violation-state",
       "title": "The Violation State",
-      "fullTitle": "The Violation State",
-      "subtitle": "When one safety trigger shuts down an entire modality",
+      "fullTitle": "The Violation State: Safety-State Persistence in ChatGPT's Image Generation",
+      "subtitle": "Safety-State Persistence in ChatGPT's Image Generation",
       "status": "Preprint",
       "url": "/studies/violation-state",
       "tagline": "When one safety trigger shuts down an entire modality",
