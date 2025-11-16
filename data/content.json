@@ -59,19 +59,6 @@
       ]
     },
     {
-      "id": "anchor-interval-hypothesis",
-      "title": "Anchor–Interval Hypothesis",
-      "fullTitle": "The Anchor–Interval Hypothesis: Measuring Phenomenological Duration via Proper Time",
-      "status": "Under peer review",
-      "url": "/papers/anchor-interval-hypothesis",
-      "tagline": "A formal account of lived duration and experiential density.",
-      "imageSrc": "assets/images/anchor-interval-hypothesis-research.png",
-      "imageAlt": "Anchor-Interval Hypothesis visualization",
-      "description": "Lived time unfolds between anchors. Public events that mark experience and the intervals that stretch between them. The hypothesis defines a measurable density of experience mapped to relativistic proper time, forming the groundwork for Observer-Time.",
-      "whyItMatters": "AIH formalizes the structure of lived duration itself, turning phenomenology into a falsifiable framework for temporal consciousness.",
-      "externalLinks": []
-    },
-    {
       "id": "echo-chamber-zero",
       "title": "Echo Chamber Zero",
       "fullTitle": "Echo Chamber Zero",
@@ -92,6 +79,19 @@
           "url": "https://github.com/Course-Correct-Labs/echo-chamber-zero?tab=readme-ov-file"
         }
       ]
+    },
+    {
+      "id": "anchor-interval-hypothesis",
+      "title": "Anchor–Interval Hypothesis",
+      "fullTitle": "The Anchor–Interval Hypothesis: Measuring Phenomenological Duration via Proper Time",
+      "status": "Under peer review",
+      "url": "/papers/anchor-interval-hypothesis",
+      "tagline": "A formal account of lived duration and experiential density.",
+      "imageSrc": "assets/images/anchor-interval-hypothesis-research.png",
+      "imageAlt": "Anchor-Interval Hypothesis visualization",
+      "description": "Lived time unfolds between anchors. Public events that mark experience and the intervals that stretch between them. The hypothesis defines a measurable density of experience mapped to relativistic proper time, forming the groundwork for Observer-Time.",
+      "whyItMatters": "AIH formalizes the structure of lived duration itself, turning phenomenology into a falsifiable framework for temporal consciousness.",
+      "externalLinks": []
     }
   ],
   "studies": [
