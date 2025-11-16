@@ -1,0 +1,14 @@
+{
+  "name": "course-correct-labs-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:content": "node scripts/build-content.mjs",
+    "watch:content": "chokidar 'data/content.json' -c \"npm run build:content\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "husky": "^9.1.7"
+  }
+}

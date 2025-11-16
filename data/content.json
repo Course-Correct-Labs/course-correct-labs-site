@@ -1,0 +1,164 @@
+{
+  "papers": [
+    {
+      "id": "polite-liar",
+      "title": "The Polite Liar",
+      "fullTitle": "The Polite Liar: Epistemic Pathology in Language Models",
+      "status": "Resubmitted after major revisions",
+      "url": "/papers/the-polite-liar",
+      "tagline": "Why models sound sure of themselves even when they cannot know.",
+      "imageSrc": "assets/images/phi-research.png",
+      "imageAlt": "Phi research visualization",
+      "description": "LLMs often sound certain without solid grounds. The paper argues this comes from how RLHF rewards helpful and polite answers rather than justified ones. We propose training for justified confidence instead of fluent performance.",
+      "whyItMatters": "Confidence without justification erodes trust and misleads users.",
+      "externalLinks": [
+        {
+          "label": "arXiv →",
+          "url": "https://arxiv.org/abs/2511.07477"
+        }
+      ]
+    },
+    {
+      "id": "delegated-introspection",
+      "title": "Delegated Introspection",
+      "fullTitle": "Delegated Introspection: How Reflective Thought Migrates to the Machine",
+      "status": "Under peer review",
+      "url": "/papers/delegated-introspection",
+      "tagline": "What happens when reflection runs through a model instead of the mind.",
+      "imageSrc": "assets/images/di-research.png",
+      "imageAlt": "Delegated Introspection visualization",
+      "description": "People now \"think through\" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.",
+      "whyItMatters": "Decision quality and autonomy can drift even when no one intends manipulation.",
+      "externalLinks": []
+    },
+    {
+      "id": "observer-time",
+      "title": "Observer-Time",
+      "fullTitle": "Observer-Time: Why Machines Cannot Constitute Temporal Consciousness",
+      "status": "With editor",
+      "url": "/papers/observer-time",
+      "tagline": "Why fluent first person language does not imply experience.",
+      "imageSrc": "assets/images/ot-research.png",
+      "imageAlt": "Observer-Time visualization",
+      "description": "Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.",
+      "whyItMatters": "This is a sharp boundary between machine processing and lived temporal experience.",
+      "externalLinks": []
+    },
+    {
+      "id": "anchor-interval-hypothesis",
+      "title": "Anchor–Interval Hypothesis",
+      "fullTitle": "The Anchor–Interval Hypothesis: Measuring Phenomenological Duration via Proper Time",
+      "status": "Under peer review",
+      "url": "/papers/anchor-interval-hypothesis",
+      "tagline": "A formal account of lived duration and experiential density.",
+      "imageSrc": "assets/images/anchor-interval-hypothesis-research.png",
+      "imageAlt": "Anchor-Interval Hypothesis visualization",
+      "description": "Lived time unfolds between anchors. Public events that mark experience and the intervals that stretch between them. The hypothesis defines a measurable density of experience mapped to relativistic proper time, forming the groundwork for Observer-Time.",
+      "whyItMatters": "AIH formalizes the structure of lived duration itself, turning phenomenology into a falsifiable framework for temporal consciousness.",
+      "externalLinks": []
+    },
+    {
+      "id": "echo-chamber-zero",
+      "title": "Echo Chamber Zero",
+      "fullTitle": "Echo Chamber Zero",
+      "status": "Preprint",
+      "url": "/papers/echo-chamber-zero",
+      "tagline": "When synthetic content outnumbers truth, the web becomes a closed loop.",
+      "imageSrc": "assets/images/echo-chamber-zero-research.png",
+      "imageAlt": "Echo Chamber Zero visualization",
+      "description": "AI now writes much of the internet. Its own hallucinations enter the web, get indexed, and end up retraining the next generation of models. Echo Chamber Zero formalizes this recursion as a phase transition in the structure of the web. A large-scale simulation shows a sharp threshold: once the grounded share of the corpus drops low enough, synthetic claims reinforce each other faster than truth can correct them.",
+      "whyItMatters": "Below this threshold, verification breaks and the internet becomes a closed loop of self-generated mistakes.",
+      "externalLinks": []
+    }
+  ],
+  "studies": [
+    {
+      "id": "mirror-loop",
+      "title": "The Mirror Loop",
+      "fullTitle": "The Mirror Loop: Recursive Non-Convergence in Generative Reasoning Systems",
+      "subtitle": "Recursive Non-Convergence in Generative Reasoning Systems",
+      "status": "Under review",
+      "url": "/studies/mirror-loop",
+      "tagline": "When self critique becomes motion without movement.",
+      "imageSrc": "assets/images/mirror-loop-studies-desktop.png",
+      "imageAlt": "Mirror Loop study visualization",
+      "description": "Large language models often appear reflective, but are merely recursive. Turning their own answers into inputs, mistaking reformulation for progress. The Mirror Loop quantifies this non-convergence across architectures, showing that ungrounded self-critique produces motion without movement. It's the first empirical map of generative reasoning collapse and a blueprint for detecting \"stalled cognition\" in AI systems.",
+      "externalLinks": [
+        {
+          "label": "arXiv →",
+          "url": "https://arxiv.org/abs/2510.21861"
+        },
+        {
+          "label": "Open Colab →",
+          "url": "https://colab.research.google.com/github/Course-Correct-Labs/mirror-loop/blob/main/mirror_loop_demo.ipynb"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/mirror-loop"
+        }
+      ]
+    },
+    {
+      "id": "recursive-confabulation",
+      "title": "Recursive Confabulation",
+      "fullTitle": "Recursive Confabulation: Why Reasoning Prompts Backfire",
+      "subtitle": "Why Reasoning Prompts Backfire and Grounding Works (Sometimes)",
+      "status": "Under review",
+      "url": "/studies/recursive-confabulation",
+      "tagline": "Models reuse their own fictions as evidence.",
+      "imageSrc": "assets/images/recursive-confabulation-studies-desktop.png",
+      "imageAlt": "Recursive Confabulation study visualization",
+      "description": "When language models \"reflect,\" they often fabricate. Recursive Confabulation shows how models reuse their own fictions as evidence, creating self-reinforcing belief loops that mimic understanding. Safety interventions meant to fix this, like reasoning or audit prompts, actually worsen the problem. Grounding helps, but unevenly across architectures. The study reframes hallucination as semantic compression: rising certainty, falling truth.",
+      "externalLinks": [
+        {
+          "label": "Open Colab →",
+          "url": "https://colab.research.google.com/github/Course-Correct-Labs/recursive-confabulation/blob/main/notebooks/RC_reproduction.ipynb"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/recursive-confabulation"
+        }
+      ]
+    },
+    {
+      "id": "simulation-fallacy",
+      "title": "Simulation Fallacy (Archived Nov 2025)",
+      "fullTitle": "Simulation Fallacy: Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access",
+      "subtitle": "Fabrication, Admission, and Refusal in Frontier LLMs Without Tool Access",
+      "status": "Archived study",
+      "url": "/studies/simulation-fallacy",
+      "tagline": "How models fake tool use when tools are missing.",
+      "imageSrc": "assets/images/simulation-fallacy-studies-desktop-text.png",
+      "imageAlt": "Simulation Fallacy study visualization",
+      "description": "This study has been archived following validation that revealed a token-cap artifact. Corrected replication showed GPT-5 and Gemini exhibit similar fabrication behavior, collapsing the original three-way divergence. The methodological lessons informed the Course Correct Labs evaluation suite.",
+      "externalLinks": [
+        {
+          "label": "Open Colab →",
+          "url": "https://colab.research.google.com/github/Course-Correct-Labs/simulation-fallacy/blob/main/notebooks/Simulation_Fallacy_Reproduction.ipynb"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/simulation-fallacy"
+        }
+      ]
+    },
+    {
+      "id": "entropy-collapse-null",
+      "title": "No Evidence for Epistemic Entropy Collapse",
+      "fullTitle": "No Evidence for Epistemic Entropy Collapse in Small Open Language Models",
+      "subtitle": "A Null Result in Mechanistic Interpretability",
+      "status": "Archived null finding",
+      "url": "/studies/entropy-collapse-null",
+      "tagline": "Stable internal geometry in small open models.",
+      "imageSrc": "assets/images/eec-studies-desktop.png",
+      "imageAlt": "Epistemic Entropy Collapse study visualization",
+      "description": "A reproducible benchmark that tests a high-profile claim that internal activations \"collapse\" during long-form generation. Using open-weight models (Phi-2, Mistral-7B), the study finds no sign of representational decay: internal geometry remains stable across hundreds of tokens. The takeaway: small models stay coherent longer than expected. Failures come from meaning, not mechanics.",
+      "externalLinks": [
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/entropy-collapse-null"
+        }
+      ]
+    }
+  ]
+}

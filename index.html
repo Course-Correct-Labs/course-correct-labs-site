@@ -95,7 +95,7 @@
     .section-pad h2{ margin-bottom: 1rem; }
     .section-pad .sub{ margin-bottom: 44px; }
     /* research highlights (image tiles) */
-    .highlights{display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+    .highlights{display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
     .highlights.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
     .highlights.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
     .highlights.horizontal{display:flex;flex-direction:column;gap:24px}
@@ -293,10 +293,11 @@
       <div class="container">
         <div class="section-center">
           <span class="eyebrow-orange">Research</span>
-          <h2>Four theoretical frameworks</h2>
+          <h2>Five theoretical frameworks</h2>
           <p class="sub narrow">That define the foundation of our 2025 reasoning arc.</p>
         </div>
         <div class="highlights" style="margin-top:60px">
+          <!-- PAPERS_HOME_START -->
           <div class="highlight">
             <img class="himg" src="assets/images/phi-research.png" alt="Phi research visualization" loading="lazy" />
             <div class="body">
@@ -346,6 +347,19 @@
               </div>
             </div>
           </div>
+          <div class="highlight">
+            <img class="himg" src="assets/images/echo-chamber-zero-research.png" alt="Echo Chamber Zero visualization" loading="lazy" />
+            <div class="body">
+              <strong>Echo Chamber Zero</strong>
+              <p style="font-style:italic;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.25rem">Preprint</p>
+              <p>AI now writes much of the internet. Its own hallucinations enter the web, get indexed, and end up retraining the next generation of models. Echo Chamber Zero formalizes this recursion as a phase transition in the structure of the web. A large-scale simulation shows a sharp threshold: once the grounded share of the corpus drops low enough, synthetic claims reinforce each other faster than truth can correct them.</p>
+              <p class="why">Why it matters: Below this threshold, verification breaks and the internet becomes a closed loop of self-generated mistakes.</p>
+              <div class="pills">
+                <a href="/papers/echo-chamber-zero" class="btn" style="font-size:.8rem;padding:.4rem .7rem">Read →</a>
+              </div>
+            </div>
+          </div>
+<!-- PAPERS_HOME_END -->
         </div>
       </div>
     </section>
@@ -359,6 +373,7 @@
           <p class="sub narrow">Each study pairs a runnable Colab with a public repo for reproducibility.</p>
         </div>
         <div class="highlights horizontal" style="margin-top:60px">
+          <!-- STUDIES_HOME_START -->
           <div class="highlight">
             <img class="himg" src="assets/images/mirror-loop-studies-desktop.png" alt="Mirror Loop study visualization" loading="lazy" />
             <div class="body">
@@ -411,6 +426,7 @@
               </div>
             </div>
           </div>
+<!-- STUDIES_HOME_END -->
         </div>
       </div>
     </section>
