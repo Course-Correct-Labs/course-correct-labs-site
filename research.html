@@ -76,7 +76,11 @@
     .eyebrow-orange{color:var(--orange);font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;display:block;text-align:center}
 
     /* research highlights (image tiles) */
-    .highlights{display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+    .highlights{display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+    .highlights.horizontal{display:flex;flex-direction:column;gap:24px}
+    .highlights.horizontal .highlight{flex-direction:row;gap:60px;align-items:center}
+    .highlights.horizontal .highlight .himg{width:400px;height:400px;flex-shrink:0}
+    .highlights.horizontal .highlight .body{padding:0;text-align:left;flex:1}
     @media (max-width:800px){ .highlights{grid-template-columns:1fr} }
     .highlight{background:transparent;border:none;border-radius:14px;overflow:hidden;padding:0;display:flex;flex-direction:column;gap:10px}
     .highlight .himg{width:100%;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block}
@@ -153,7 +157,7 @@
 
     <section style="padding-top:0">
       <div class="container">
-        <div class="highlights" style="margin-top:60px">
+        <div class="highlights horizontal" style="margin-top:60px">
           <!-- PAPERS_PAGE_START -->
           <div class="highlight">
             <img class="himg" src="assets/images/phi-research.png" alt="Phi research visualization" loading="lazy" />
