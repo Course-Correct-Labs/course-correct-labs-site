@@ -122,7 +122,10 @@
     .highlight .body .why{font-size:.85rem;color:rgba(255,255,255,.6);margin:.75rem auto 0;font-style:italic;max-width:38ch}
     .highlight .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
     .highlights.horizontal .highlight .pills{justify-content:flex-start}
-    @media (max-width:800px){ .highlights.horizontal .highlight .pills{justify-content:center} }
+    @media (max-width:800px){
+      .highlights.horizontal .highlight .pills{justify-content:center;flex-direction:column;align-items:center}
+      .highlights.horizontal .highlight .pills .btn{width:100%;max-width:240px}
+    }
 
     .grid{display:grid;gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -371,7 +374,7 @@
       <div class="container">
         <div class="section-center">
           <span class="eyebrow-orange">Studies</span>
-          <h2>Four empirical investigations into model reasoning.</h2>
+          <h2>Five empirical investigations into model reasoning.</h2>
           <p class="sub narrow">Each study pairs a runnable Colab with a public repo for reproducibility.</p>
         </div>
         <div class="highlights horizontal" style="margin-top:60px">
