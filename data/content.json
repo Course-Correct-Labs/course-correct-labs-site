@@ -15,6 +15,10 @@
         {
           "label": "arXiv →",
           "url": "https://arxiv.org/abs/2511.07477"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/ai-agency-evals"
         }
       ]
     },
@@ -29,7 +33,12 @@
       "imageAlt": "Delegated Introspection visualization",
       "description": "People now \"think through\" models during the moment between impulse and action. The model co-authors the user's reflection through prompt substitution, synthetic reflection, and reintegration. The result is distributed agency that feels like one's own conclusion.",
       "whyItMatters": "Decision quality and autonomy can drift even when no one intends manipulation.",
-      "externalLinks": []
+      "externalLinks": [
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/ai-agency-evals"
+        }
+      ]
     },
     {
       "id": "observer-time",
@@ -42,7 +51,12 @@
       "imageAlt": "Observer-Time visualization",
       "description": "Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.",
       "whyItMatters": "This is a sharp boundary between machine processing and lived temporal experience.",
-      "externalLinks": []
+      "externalLinks": [
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/ai-agency-evals"
+        }
+      ]
     },
     {
       "id": "anchor-interval-hypothesis",
