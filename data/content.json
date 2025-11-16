@@ -41,24 +41,6 @@
       ]
     },
     {
-      "id": "observer-time",
-      "title": "Observer-Time",
-      "fullTitle": "Observer-Time: Why Machines Cannot Constitute Temporal Consciousness",
-      "status": "With editor",
-      "url": "/papers/observer-time",
-      "tagline": "Why fluent first person language does not imply experience.",
-      "imageSrc": "assets/images/ot-research.png",
-      "imageAlt": "Observer-Time visualization",
-      "description": "Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.",
-      "whyItMatters": "This is a sharp boundary between machine processing and lived temporal experience.",
-      "externalLinks": [
-        {
-          "label": "GitHub →",
-          "url": "https://github.com/Course-Correct-Labs/ai-agency-evals"
-        }
-      ]
-    },
-    {
       "id": "echo-chamber-zero",
       "title": "Echo Chamber Zero",
       "fullTitle": "Echo Chamber Zero",
@@ -77,6 +59,24 @@
         {
           "label": "GitHub →",
           "url": "https://github.com/Course-Correct-Labs/echo-chamber-zero?tab=readme-ov-file"
+        }
+      ]
+    },
+    {
+      "id": "observer-time",
+      "title": "Observer-Time",
+      "fullTitle": "Observer-Time: Why Machines Cannot Constitute Temporal Consciousness",
+      "status": "With editor",
+      "url": "/papers/observer-time",
+      "tagline": "Why fluent first person language does not imply experience.",
+      "imageSrc": "assets/images/ot-research.png",
+      "imageAlt": "Observer-Time visualization",
+      "description": "Human time is made of elastic intervals, not just clock ticks. Current AI can track anchors but cannot constitute intervals. An internal clock task shows drift and no spontaneous alerts, exposing a structural gap.",
+      "whyItMatters": "This is a sharp boundary between machine processing and lived temporal experience.",
+      "externalLinks": [
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/ai-agency-evals"
         }
       ]
     },
