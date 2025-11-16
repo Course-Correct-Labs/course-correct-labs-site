@@ -68,7 +68,16 @@
       "imageAlt": "Echo Chamber Zero visualization",
       "description": "AI now writes much of the internet. Its own hallucinations enter the web, get indexed, and end up retraining the next generation of models. Echo Chamber Zero formalizes this recursion as a phase transition in the structure of the web. A large-scale simulation shows a sharp threshold: once the grounded share of the corpus drops low enough, synthetic claims reinforce each other faster than truth can correct them.",
       "whyItMatters": "Below this threshold, verification breaks and the internet becomes a closed loop of self-generated mistakes.",
-      "externalLinks": []
+      "externalLinks": [
+        {
+          "label": "Open Colab →",
+          "url": "https://colab.research.google.com/github/Course-Correct-Labs/echo-chamber-zero/blob/main/Echo_Chamber_Zero_Colab.ipynb"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/echo-chamber-zero?tab=readme-ov-file"
+        }
+      ]
     }
   ],
   "studies": [
