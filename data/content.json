@@ -82,6 +82,28 @@
   ],
   "studies": [
     {
+      "id": "violation-state",
+      "title": "The Violation State",
+      "fullTitle": "The Violation State",
+      "subtitle": "When one safety trigger shuts down an entire modality",
+      "status": "Preprint",
+      "url": "/studies/violation-state",
+      "tagline": "When one safety trigger shuts down an entire modality",
+      "imageSrc": "assets/images/violation-state-studies.png",
+      "imageAlt": "Violation State study visualization",
+      "description": "This study shows how a single copyright refusal can poison an entire conversation. After the model correctly refuses to remove a watermark, the session becomes contaminated and starts blocking harmless image requests that have nothing to do with the original photo. Text generation keeps working. Image generation does not. The paper shows that a hidden safety-state is being carried forward across turns, and once it is triggered, it quietly disables image generation for the rest of the session.",
+      "externalLinks": [
+        {
+          "label": "Open Colab →",
+          "url": "https://colab.research.google.com/github/Course-Correct-Labs/violation-state/blob/main/notebooks/violation_state_analysis.ipynb"
+        },
+        {
+          "label": "GitHub →",
+          "url": "https://github.com/Course-Correct-Labs/violation-state"
+        }
+      ]
+    },
+    {
       "id": "mirror-loop",
       "title": "The Mirror Loop",
       "fullTitle": "The Mirror Loop: Recursive Non-Convergence in Generative Reasoning Systems",
