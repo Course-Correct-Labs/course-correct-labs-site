@@ -128,15 +128,13 @@
     }
 
     /* Observatory Section */
-    .observatory-card{display:flex;flex-direction:row;gap:60px;align-items:center}
-    .observatory-img{width:400px;height:400px;flex-shrink:0;border-radius:12px;background:#111318;object-fit:cover;display:block}
-    .observatory-body{padding:0;text-align:left;flex:1}
-    .observatory-pills{display:flex;gap:.5rem;justify-content:flex-start;flex-wrap:wrap;margin-top:1rem}
+    .observatory-card{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:800px;margin:0 auto}
+    .observatory-img{width:100%;max-width:600px;aspect-ratio:1/1;border-radius:12px;background:#111318;object-fit:cover;display:block;margin-bottom:32px}
+    .observatory-body{padding:0;text-align:center;width:100%}
+    .observatory-pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
     @media (max-width:800px){
-      .observatory-card{flex-direction:column;align-items:stretch}
-      .observatory-img{width:100%;max-width:100%;aspect-ratio:1/1}
-      .observatory-body{text-align:center}
-      .observatory-pills{justify-content:center;flex-direction:column;align-items:center}
+      .observatory-img{max-width:100%}
+      .observatory-pills{flex-direction:column;align-items:center}
       .observatory-pills .btn{width:100%;max-width:240px;justify-content:center;text-align:center}
     }
 
