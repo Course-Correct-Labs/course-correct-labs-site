@@ -96,6 +96,19 @@
     .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
     .footer-links a:hover{background:rgba(255,255,255,.15)}
     .footer-links a svg{width:16px;height:16px;fill:currentColor}
+
+    /* Observatory section */
+    .observatory-card{display:flex;flex-direction:row;gap:60px;align-items:center}
+    .observatory-img{width:400px;height:400px;flex-shrink:0;border-radius:12px;background:#111318;object-fit:cover;display:block}
+    .observatory-body{padding:0;text-align:left;flex:1}
+    .observatory-pills{display:flex;gap:.5rem;justify-content:flex-start;flex-wrap:wrap;margin-top:1rem}
+    @media (max-width:800px){
+      .observatory-card{flex-direction:column;align-items:stretch}
+      .observatory-img{width:100%;max-width:100%;aspect-ratio:1/1}
+      .observatory-body{text-align:center}
+      .observatory-pills{justify-content:center;flex-direction:column;align-items:center}
+      .observatory-pills .btn{width:100%;max-width:240px;justify-content:center;text-align:center}
+    }
   </style>
 
   <!-- Structured Data for Organization -->
@@ -188,6 +201,22 @@
               <h3 class="feature-title">Entropy Trajectory</h3>
               <p class="feature-desc" style="font-style:italic;margin-bottom:8px">What it measures</p>
               <p class="feature-desc">Variance in internal activations over time. A dynamics view of stability vs. collapse.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Observatory Section -->
+        <div style="margin-top:80px">
+          <div class="observatory-card">
+            <img class="observatory-img" src="assets/images/observatory-eval.png" alt="Observatory evaluation toolkit visualization" loading="lazy" />
+            <div class="observatory-body">
+              <strong style="display:block;font-size:1.5rem;margin-bottom:8px;color:var(--fg)">The Observatory</strong>
+              <p style="font-style:italic;color:var(--muted);margin:0 0 16px;font-size:1.02rem">A unified evaluation toolkit for all Course Correct Labs studies</p>
+              <p style="color:var(--muted);margin:0;font-size:1rem;line-height:1.7">Standardized metrics, cross-study analysis, visualizations, and a flagship Reasoning Stability Observatory notebook.</p>
+              <div class="observatory-pills">
+                <a href="https://github.com/Course-Correct-Labs/course-correct-evals" target="_blank" rel="noopener noreferrer" class="btn">GitHub →</a>
+                <a href="https://colab.research.google.com/github/Course-Correct-Labs/course-correct-evals/blob/main/observatory/reasoning_stability_observatory.ipynb" target="_blank" rel="noopener noreferrer" class="btn">Open Colab →</a>
+              </div>
             </div>
           </div>
         </div>
